@@ -10,6 +10,7 @@
     "start": "mdx-deck deck.mdx"
   },
   "dependencies": {
+    "@builder.io/react": "^2.0.1",
     "@code-surfer/themes": "^3.1.1",
     "code-surfer": "^3.1.1",
     "styled-components": "^5.3.5"
