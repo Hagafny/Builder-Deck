@@ -1,0 +1,16 @@
+{
+  "name": "react-deck-mdx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "mdx-deck": "4.0.0"
+  },
+  "scripts": {
+    "start": "mdx-deck slides.mdx"
+  },
+  "dependencies": {
+    "@code-surfer/themes": "^3.1.1",
+    "code-surfer": "^3.1.1"
+  }
+}

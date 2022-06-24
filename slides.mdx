@@ -1,0 +1,64 @@
+import { CodeSurfer } from 'code-surfer';
+import { shadesOfPurple, vsDark, oceanicNext} from '@code-surfer/themes';
+
+import myTheme from './theme'
+
+export const theme = myTheme
+
+# My very first presentation
+
+[@marioy47](https://twitter.com/marioy47)
+
+---
+
+# This is the second slide
+
+With some content
+
+- One
+- Two
+- Three
+
+---
+
+# Now with a remote image
+
+---
+
+<CodeSurfer theme={myTheme}>
+
+```js
+import React from 'react';
+import MuiButton from '@mui/material/Button';
+
+const Button = ({ text, link, type }) => {
+  return (
+    <MuiButton text={text} href={link} variant={type}>
+      {text}
+    </MuiButton>
+  );
+};
+
+export default Button
+```
+
+```js 1
+console.log(1);
+console.log(2);
+console.log(3);
+```
+
+```js 
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+console.log(6);
+```
+
+</CodeSurfer>
+
+---
+
+# yo
