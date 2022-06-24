@@ -1,5 +1,5 @@
 
-export default {
+  export default {
     colors: {
         text: '#41342d',
         background: '#fffcf9',

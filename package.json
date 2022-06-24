@@ -7,10 +7,11 @@
     "mdx-deck": "4.0.0"
   },
   "scripts": {
-    "start": "mdx-deck slides.mdx"
+    "start": "mdx-deck deck.mdx"
   },
   "dependencies": {
     "@code-surfer/themes": "^3.1.1",
-    "code-surfer": "^3.1.1"
+    "code-surfer": "^3.1.1",
+    "styled-components": "^5.3.5"
   }
 }
