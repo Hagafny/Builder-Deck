@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { BuilderComponent, builder } from '@builder.io/react'
+import config from '../config'
 
-builder.init('100492d1ecd74efb94d139f7644a92ea')
+builder.init(config.BUILDER_API_KEY)
 
-export const MyTestComponent = () => {
+export const BuilderSlideSection = () => {
     const [builderContentJson, setBuilderContentJson] = useState(null)
   
     useEffect(() => { 
