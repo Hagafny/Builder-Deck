@@ -1,9 +1,12 @@
+import base from './base'
+
+const { TEXT, BACKGROUND, PRIMARY } = base
 
   export default {
     colors: {
-        text: '#41342d',
-        background: '#fffcf9',
-        primary: '#375437'
+        text: TEXT,
+        background: BACKGROUND,
+        primary: PRIMARY
     },
     styles: {
       CodeSurfer: {
@@ -32,8 +35,8 @@
           color: "text"
         },
         subtitle: {
-          color: "#d6deeb",
-          backgroundColor: "rgba(10,10,10,0.9)"
+            backgroundColor: "background",
+            color: "text"
         },
         unfocused: {
           // only the opacity of unfocused code can be changed

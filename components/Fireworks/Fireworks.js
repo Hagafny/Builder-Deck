@@ -1,4 +1,3 @@
-// You need to install React/React-DOM
 import React from 'react'
 import { Fireworks as FX } from 'fireworks/lib/react'
 
@@ -15,9 +14,11 @@ export const Fireworks = ({ text, count, colors, interval = 500 }) => {
   }
 
   return (
-    <div>
+    <div style={{textAlign: 'center'}}>
       <FX {...fxProps} />
       <h1>{text}</h1>
     </div>
   )
 }
+
+{/* <Fireworks colors={[{color :'#cc3333'}, {color: '#4CAF50'}, {color: '#81C784'}]} count={5} interval={500} text={"Yo!"} />  */}

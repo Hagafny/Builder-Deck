@@ -7,13 +7,18 @@
     "mdx-deck": "4.0.0"
   },
   "scripts": {
-    "start": "mdx-deck deck.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "help": "mdx-deck"
   },
   "dependencies": {
     "@builder.io/react": "^2.0.1",
     "@code-surfer/themes": "^3.1.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.5",
     "code-surfer": "^3.1.1",
     "fireworks": "^2.2.7",
-    "styled-components": "^5.3.5"
+    "react-spring": "^9.4.5"
   }
 }

@@ -1,17 +1,22 @@
-import { CodeSurfer } from 'code-surfer';
+import './styles.css'
+import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
 import { shadesOfPurple, vsDark, oceanicNext} from '@code-surfer/themes';
-import { BuilderSlideSection } from './components/BuilderSlideSection.js'
+import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
 import { Fireworks } from './components/Fireworks/Fireworks.js'
+import TestSpring from './components/TestSpring.js'
+import Button from './components/Button/Button.js'
 
 import './components/Fireworks/Fireworks.builder.js'
 
-import myTheme from './theme'
+import myTheme from './theme/theme'
 
 export const theme = myTheme
 
 # My very first presentation
 
-<Fireworks colors={[{color :'#cc3333'}, {color: '#4CAF50'}, {color: '#81C784'}]} count={5} interval={500} text={"Yo!"} />
+<TestSpring />
+<Button text="one two one two" link="/" />
+
 
 ---
 
@@ -31,7 +36,7 @@ With some content
   <BuilderSlideSection/>
 </div>
 
----
+<!-- ---
 
 <CodeSurfer theme={myTheme}>
 
@@ -67,6 +72,50 @@ console.log(6);
 
 </CodeSurfer>
 
+-->
+
 ---
 
-# yeah
+<CodeSurferColumns themes={[vsDark, shadesOfPurple]}>
+
+<Step subtitle="First Step">
+
+```js
+console.log(1);
+console.log(2);
+```
+
+```js
+console.log("what");
+console.log("why");
+```
+
+```js
+console.log("a");
+console.log("b");
+console.log("3");
+```
+
+</Step>
+
+<Step subtitle="Second Step">
+
+```js 2
+console.log("ron");
+console.log("amir");
+```
+
+```js 2
+console.log("avi");
+console.log("bob");
+```
+
+```js 2
+console.log("amos");
+console.log("bezeloa;");
+console.log("cameron");
+```
+
+</Step>
+
+</CodeSurferColumns>
