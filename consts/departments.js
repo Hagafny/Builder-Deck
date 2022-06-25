@@ -1,3 +1,5 @@
+import theme  from '../theme/mui'
+
 export const DEPARTMENTS = {
     MARKETING: 'Marketing',
     DESIGN: 'Design',
@@ -5,7 +7,7 @@ export const DEPARTMENTS = {
     OPERATIONS: 'Operations'
 }
 
-export const DEPARTMENT_COLORS = {
+export const DEPARTMENTS_COLORS = {
     [DEPARTMENTS.MARKETING]:  theme.colors.green4,
     [DEPARTMENTS.DESIGN]: theme.colors.green3,
     [DEPARTMENTS.PRODUCT]: theme.colors.green2,

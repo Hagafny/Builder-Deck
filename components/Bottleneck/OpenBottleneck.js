@@ -26,7 +26,7 @@ const circleAnimations = () => {
 ]
 }
 
-export const ClosedBottleneck = () => {
+export const OpenBottleneck = () => {
     const animations = React.useMemo(() => circleAnimations(), [])
     const springs = useSprings(animations.length, 
         animations.map(({ topStart, topEnd, leftStart, leftEnd, delay }, i) => ({
@@ -38,7 +38,7 @@ export const ClosedBottleneck = () => {
         )
 
     return (
-        <BaseBottleneck mode={BOTTLENECK_MODE.CLOSED}>
+        <BaseBottleneck mode={BOTTLENECK_MODE.OPEN}>
            {springs.map((springStyle, i) => <AnimatedCircle size={24} color={animations[i].color} springProps={springStyle} />)}
         </BaseBottleneck>
     )
