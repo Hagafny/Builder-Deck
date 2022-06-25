@@ -1,10 +1,14 @@
 import './styles.css'
+import { Steps } from 'mdx-deck'
 import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
 import { shadesOfPurple, vsDark, oceanicNext} from '@code-surfer/themes';
 import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
 import { Fireworks } from './components/Fireworks/Fireworks.js'
 import Button from './components/Button/Button.js'
-import { Bottleneck } from './slides/Bottleneck'
+import { Bottleneck } from './slides/Bottleneck.js'
+import { RandomlyPlaced } from './layouts/RandomlyPlaced.js'
+import { ImageDeck } from './components/ImageDeck/ImageDeck.js'
+
 
 import './components/Fireworks/Fireworks.builder.js'
 
@@ -12,33 +16,42 @@ import myTheme from './theme/theme'
 
 export const theme = myTheme
 
-# My very first presentation
+# Code or No-Code: Why not both? 🤷‍♀️
 
-<Button text="one two one two" link="/" />
+<Steps>
 
----
+## Building a hybrid infrastructure using Next.js & Builder.io to free up your time
 
-<Bottleneck />
+<RandomlyPlaced top={20} left={40}>
+  <ImageDeck width={400} height={400} imgSrc='ron.png' />
+</RandomlyPlaced>
 
----
-
-# This is the second slide
-
-With some content
-
-- One
-- Two
-- Three
+<RandomlyPlaced top={20} left={40}>
+  <ImageDeck width={600} height={500} imgSrc='ron.png' />
+</RandomlyPlaced>
+</Steps>
 
 ---
 
-# Now with a remote image
+<RandomlyPlaced top={20} left={40}>
+  <ImageDeck width={400} height={400} imgSrc='bottle.png' />
+</RandomlyPlaced>
+
+---
+
+# We can ship code 5X faster 🚀
+
+---
+
+
+
+---
 
 <div style={{width: '100vw'}}>
   <BuilderSlideSection/>
 </div>
 
-<!-- ---
+---
 
 <CodeSurfer theme={myTheme}>
 
@@ -73,8 +86,6 @@ console.log(6);
 ```
 
 </CodeSurfer>
-
--->
 
 ---
 

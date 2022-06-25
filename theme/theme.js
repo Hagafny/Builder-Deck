@@ -2,46 +2,52 @@ import base from './base'
 
 const { TEXT, BACKGROUND, PRIMARY } = base
 
-  export default {
-    colors: {
-        text: TEXT,
-        background: BACKGROUND,
-        primary: PRIMARY
+export default {
+  colors: {
+      text: TEXT,
+      background: BACKGROUND,
+      primary: PRIMARY
+  },
+  styles: {
+    h1: {
+      margin: '30px'
     },
-    styles: {
-      CodeSurfer: {
-        pre: {
-          color: "text",
-          backgroundColor: "background"
+    h2: {
+      margin: 0
+    },
+    CodeSurfer: {
+      pre: {
+        color: "text",
+        backgroundColor: "background"
+      },
+      code: {
+        color: "text",
+        backgroundColor: "background"
+      },
+      tokens: {
+        "comment cdata doctype": {
+          fontStyle: "italic"
         },
-        code: {
-          color: "text",
-          backgroundColor: "background"
+        "builtin changed keyword punctuation operator tag deleted string attr-value char number inserted": {
+          color: "primary",
+          fontWeight: 600
         },
-        tokens: {
-          "comment cdata doctype": {
-            fontStyle: "italic"
-          },
-          "builtin changed keyword punctuation operator tag deleted string attr-value char number inserted": {
-            color: "primary",
-            fontWeight: 600
-          },
-          "line-number": {
-            opacity: 0.8
-          }
-        },
-        title: {
+        "line-number": {
+          opacity: 0.8
+        }
+      },
+      title: {
+        backgroundColor: "background",
+        color: "text"
+      },
+      subtitle: {
           backgroundColor: "background",
           color: "text"
-        },
-        subtitle: {
-            backgroundColor: "background",
-            color: "text"
-        },
-        unfocused: {
-          // only the opacity of unfocused code can be changed
-          opacity: 0.1
-        }
+      },
+      unfocused: {
+        // only the opacity of unfocused code can be changed
+        opacity: 0.1
       }
     }
-  };
+  }
+};

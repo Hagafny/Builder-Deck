@@ -10,7 +10,6 @@ export const BOTTLENECK_MODE = {
 
 
 export const BaseBottleneck = ({ mode, children }) => {
-
     const bottleComponent = mode === BOTTLENECK_MODE.CLOSED ?  <Image src={bottlePath} style={{ backgroundSize: 'contain'}} /> : <OpenBottleContainer />
 
     return (

@@ -1,11 +1,13 @@
 import React from 'react'
 
-function RandomlyPlaced({children, style}) {
+const RandomlyPlaced = ({top, left, style = {}, children}) => {
+  const containerStyle = {position: 'absolute', zIndex: 2, left: `${left}%`, top: `${top}%`, ...style}
+
   return (
-    <div style={{position: 'absolute', zIndex: 2, height: 'inherit', width: 'inherit', ...style}}>
+    <div style={containerStyle}>
           {children}
     </div>
   )
 }
 
-export {RandomlyPlaced }
+export { RandomlyPlaced }
