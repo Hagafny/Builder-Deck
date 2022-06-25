@@ -3,10 +3,12 @@ import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
 import { shadesOfPurple, vsDark, oceanicNext} from '@code-surfer/themes';
 import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
 import { Fireworks } from './components/Fireworks/Fireworks.js'
-import TestSpring from './components/TestSpring.js'
 import Button from './components/Button/Button.js'
+import { Bottleneck } from './slides/Bottleneck'
+import {Circle} from './components/Circle.js'
 
 import './components/Fireworks/Fireworks.builder.js'
+
 
 import myTheme from './theme/theme'
 
@@ -14,9 +16,11 @@ export const theme = myTheme
 
 # My very first presentation
 
-<TestSpring />
 <Button text="one two one two" link="/" />
 
+---
+
+<Bottleneck />
 
 ---
 
