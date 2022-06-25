@@ -18,9 +18,14 @@ const circleAnimations = () => {
     return [
         {...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '43%', leftEnd: '94%' },
         {...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '37%', leftEnd: '91%' },
-         {...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '41%', leftEnd: '92%'  },
-        {...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '41%', leftEnd: '92%'  },
-        {...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '35%', leftEnd: '84%'  },
+         {...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '50%', leftEnd: '91%'  },
+        {...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '45%', leftEnd: '88%'  },
+
+
+        {...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '43%', leftEnd: '87%' },
+        {...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '37%', leftEnd: '86%' },
+         {...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '50%', leftEnd: '85%'  },
+        {...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '45%', leftEnd: '83%'  },
 
         // {...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '41%', leftEnd: '92%', delay: 700 },
 ]

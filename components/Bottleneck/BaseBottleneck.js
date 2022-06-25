@@ -1,7 +1,6 @@
 import React from 'react'
-import { Image } from 'mdx-deck'
-import bottlePath from '../../images/bottle.png'
 import { DEPARTMENTS_COLORS } from '../../consts/departments'
+import { DECK_IMAGES, ImageDeck } from '../../images/ImageDeck'
 
 export const BOTTLENECK_MODE = {
     OPEN: 'open',
@@ -10,10 +9,10 @@ export const BOTTLENECK_MODE = {
 
 
 export const BaseBottleneck = ({ mode, children }) => {
-    const bottleComponent = mode === BOTTLENECK_MODE.CLOSED ?  <Image src={bottlePath} style={{ backgroundSize: 'contain'}} /> : <OpenBottleContainer />
+    const bottleComponent = mode === BOTTLENECK_MODE.CLOSED ?  <ImageDeck deckImage={DECK_IMAGES.BOTTLE} /> : <OpenBottleContainer />
 
     return (
-        <div style={{position: 'relative', height: '200px', width: '800px'}}>
+        <div style={{position: 'relative', height: '22%', width: '40%'}}>
             {bottleComponent}
             <DepartmentTitles />
             {children}

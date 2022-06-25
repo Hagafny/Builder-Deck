@@ -1,15 +1,15 @@
 import './styles.css'
-import { Steps } from 'mdx-deck'
+import { Steps, Notes} from 'mdx-deck'
 import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
 import { shadesOfPurple, vsDark, oceanicNext} from '@code-surfer/themes';
 import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
 import { Fireworks } from './components/Fireworks/Fireworks.js'
 import Button from './components/Button/Button.js'
-import { Bottleneck } from './slides/Bottleneck.js'
+import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js'
 import { RandomlyPlaced } from './layouts/RandomlyPlaced.js'
-import { ImageDeck } from './components/ImageDeck/ImageDeck.js'
-
-
+import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js'
+import { FadeIn } from './components/FadeIn.js'
+import { Gauge } from './components/Gauge/Gauge.js'
 import './components/Fireworks/Fireworks.builder.js'
 
 import myTheme from './theme/theme'
@@ -22,28 +22,42 @@ export const theme = myTheme
 
 ## Building a hybrid infrastructure using Next.js & Builder.io to free up your time
 
-<RandomlyPlaced top={20} left={40}>
-  <ImageDeck width={400} height={400} imgSrc='ron.png' />
-</RandomlyPlaced>
-
-<RandomlyPlaced top={20} left={40}>
-  <ImageDeck width={600} height={500} imgSrc='ron.png' />
-</RandomlyPlaced>
 </Steps>
-
----
-
-<RandomlyPlaced top={20} left={40}>
-  <ImageDeck width={400} height={400} imgSrc='bottle.png' />
-</RandomlyPlaced>
 
 ---
 
 # We can ship code 5X faster 🚀
 
+<Notes>
+
+- Only visible in presenter mode
+- Markdown syntax can be used with empty lines around the content
+
+</Notes>
+
 ---
 
+<ImageDeck width={'90%'} height={'90%'} deckImage={DECK_IMAGES.DEV_DEPENDNECIES} />
 
+<Notes>
+
+- Marketing team wants to change content of the pages
+- Design team wants to try different layouts, and as the developers we need to do some pixel pushing here and there
+- Product would like to run A/B tests because maybe instead of 10% discount, we show, a 50$ discont , that can convert more people
+- Finally Operations, they need their internal tools to help their prodactivity
+- And here we sit , the developers, caught in the middle
+
+</Notes>
+
+---
+
+<Gauge id="before" percent={92} style={{height: '250px'}} />
+<Gauge id="after" percent={61} style={{height: '250px'}} />
+
+---
+
+## Code releases became the bottleneck of the business
+<ClosedBottleneck initialDelay={5000} interval={300}  />
 
 ---
 
