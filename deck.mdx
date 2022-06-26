@@ -1,20 +1,26 @@
 import './styles.css'
 import { Steps, Notes} from 'mdx-deck'
 import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
-import { shadesOfPurple, vsDark, oceanicNext} from '@code-surfer/themes';
+import { vsDark, nightOwl } from '@code-surfer/themes';
 import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
 import { Fireworks } from './components/Fireworks/Fireworks.js'
-import Button from './components/Button/Button.js'
+import { Button } from './components/Button/Button.js'
 import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js'
 import { RandomlyPlaced } from './layouts/RandomlyPlaced.js'
 import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js'
 import { FadeIn } from './components/FadeIn.js'
 import { Gauge } from './components/Gauge/Gauge.js'
+import { IntroGrid } from './layouts/IntroGrid.js'
+import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js'
+import { SideBySide } from './layouts/SideBySide.js'
+
 import './components/Fireworks/Fireworks.builder.js'
 
 import myTheme from './theme/theme'
 
 export const theme = myTheme
+
+<ClosedBottleneck />
 
 # Code or No-Code: Why not both? 🤷‍♀️
 
@@ -37,6 +43,50 @@ export const theme = myTheme
 
 ---
 
+# Hello 👋
+
+<IntroGrid>
+  <ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.RON} style={ {gridRow:'1/2', gridColumn:'1/3'}} />
+
+  <Steps>
+
+  <ImageDeck width={'50%'} height={'50%'} deckImage={DECK_IMAGES.MIXTILES}  style={ {gridRow:'2/3', gridColumn:'1/2'}} />
+  <ImageDeck width={'50%'} height={'50%'} deckImage={DECK_IMAGES.EASYPLANT} style={ {gridRow:'1/2', gridColumn:'2/3'}} />
+
+  </Steps>
+</IntroGrid>
+
+---
+
+# What is the plan today
+
+<Steps>
+
+- Moving from our current stack to Next.js and Builder.io
+- What is Builder.io?
+- Next.js 101
+- How to combine both to create a infrastructure that can save you time 
+
+</Steps>
+
+<Notes>
+  Even today!
+</Notes>
+
+---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.HOMEPAGE} styles={{backgroundSize: 'cover'}} />
+
+ ---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.COLLECTIONS} styles={{backgroundSize: 'cover'}} />
+
+---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ} styles={{backgroundSize: 'cover'}} />
+
+---
+
 <ImageDeck width={'90%'} height={'90%'} deckImage={DECK_IMAGES.DEV_DEPENDNECIES} />
 
 <Notes>
@@ -51,25 +101,31 @@ export const theme = myTheme
 
 ---
 
-<Gauge id="before" percent={92} style={{height: '250px'}} />
-<Gauge id="after" percent={61} style={{height: '250px'}} />
-
----
-
 ## Code releases became the bottleneck of the business
-<ClosedBottleneck initialDelay={5000} interval={300}  />
+<ClosedBottleneck initialDelay={4000} interval={300}  />
 
 ---
 
-<div style={{width: '100vw'}}>
-  <BuilderSlideSection/>
+<div style={{display: 'flex', justifyContent: 'center', alinItems:'center', marginBottom: '30px'}}>
+  <h1 style={{marginTop: 0, marginBottom: 0, marginLeft: 0}}>Design System</h1>
+  <ImageDeck deckImage={DECK_IMAGES.DESIGN_SYSTEM} style={{ width: '64px', height: '64px', marginTop: '11px' }} />
 </div>
 
+<Steps>
+  <div>
+    <Button text="My Button" href="./" />
+  </div>
+</Steps>
+
+ 
 ---
 
-<CodeSurfer theme={myTheme}>
+<CodeSurferColumns themes={[vsDark, myTheme]}>
 
-```js
+<Step>
+
+```js showNumbers
+// Button.js
 import React from 'react';
 import MuiButton from '@mui/material/Button';
 
@@ -84,65 +140,187 @@ const Button = ({ text, link, type }) => {
 export default Button
 ```
 
-```js 1
-console.log(1);
-console.log(2);
-console.log(3);
-```
-
-```js 
-console.log(1);
-console.log(2);
-console.log(3);
-console.log(4);
-console.log(5);
-console.log(6);
-```
-
-</CodeSurfer>
-
----
-
-<CodeSurferColumns themes={[vsDark, shadesOfPurple]}>
-
-<Step subtitle="First Step">
-
 ```js
-console.log(1);
-console.log(2);
-```
-
-```js
-console.log("what");
-console.log("why");
-```
-
-```js
-console.log("a");
-console.log("b");
-console.log("3");
 ```
 
 </Step>
 
-<Step subtitle="Second Step">
+<Step>
 
-```js 2
-console.log("ron");
-console.log("amir");
+```js showNumbers 5[16:38]
+// Button.js
+import React from 'react';
+import MuiButton from '@mui/material/Button';
+
+const Button = ({ text, link, type }) => {
+  return (
+    <MuiButton text={text} href={link} variant={type}>
+      {text}
+    </MuiButton>
+  );
+};
+
+export default Button
 ```
 
-```js 2
-console.log("avi");
-console.log("bob");
+```js
+ 
 ```
 
-```js 2
-console.log("amos");
-console.log("bezeloa;");
-console.log("cameron");
+</Step>
+
+<Step>
+
+```js showNumbers 5[16:38]
+// Button.js
+import React from 'react';
+import MuiButton from '@mui/material/Button';
+
+const Button = ({ text, link, type }) => {
+  return (
+    <MuiButton text={text} href={link} variant={type}>
+      {text}
+    </MuiButton>
+  );
+}; 
+
+export default Button 
+```
+
+```js showNumbers
+// Button.builder.js
+import { Builder } from '@builder.io/react';
+import Button  from './Button';
+
+Builder.registerComponent(Button, {
+  name: 'MyButton',
+  inputs: [
+    {
+      name: 'text',
+      type: 'string',
+      defaultValue: 'Click me',
+    },
+    {
+      name: 'link',
+      type: 'url',
+      defaultValue: '/',
+    },
+    {
+      name: 'type',
+      type: 'string',
+      enum: ['outlined', 'text', 'contained'],
+      defaultValue: 'contained',
+    }
+  ],
+});
+```
+
+</Step>
+
+<Step>
+
+```js showNumbers 5[16:38]
+// Button.js 
+import React from 'react';
+import MuiButton from '@mui/material/Button';
+
+const Button = ({ text, link, type }) => {
+  return (
+    <MuiButton text={text} href={link} variant={type}>
+      {text}
+    </MuiButton>
+  );
+}; 
+
+export default Button 
+```
+
+```js showNumbers 6,9,14,19
+// Button.builder.js
+import { Builder } from '@builder.io/react';
+import Button  from './Button';
+
+Builder.registerComponent(Button, {
+  name: 'MyButton',
+  inputs: [
+    {
+      name: 'text',
+      type: 'string',
+      defaultValue: 'Click me',
+    },
+    {
+      name: 'link',
+      type: 'url',
+      defaultValue: '/',
+    },
+    {
+      name: 'type',
+      type: 'string',
+      enum: ['outlined', 'text', 'contained'],
+      defaultValue: 'contained',
+    }
+  ],
+});
+```
+
+</Step>
+
+<Step>
+
+```js
+// app.js 
+import './/Button.builder.js'
+```
+
+```js showNumbers 6,9,14,19
+// Button.builder.js
+import { Builder } from '@builder.io/react';
+import Button from './Button';
+
+Builder.registerComponent(Button, {
+  name: 'MyButton',
+  inputs: [
+    {  
+      name: 'text',
+      type: 'string',
+      defaultValue: 'Click me',
+    },
+    {
+      name: 'link',
+      type: 'url',
+      defaultValue: '/',
+    },
+    {
+      name: 'type',
+      type: 'string',
+      enum: ['outlined', 'text', 'contained'],
+      defaultValue: 'contained',
+    }
+  ],
+});
 ```
 
 </Step>
 
 </CodeSurferColumns>
+
+---
+
+<CodeSurfer theme={vsDark}>
+
+```js
+<Fireworks text={"Some text..."} count={3} colors={['#cc3333', '#4CAF50', '#81C784']} interval={500} />
+``` 
+
+</CodeSurfer>
+
+---
+
+<Gauge id="before" percent={92} style={{height: '250px'}} />
+<Gauge id="after" percent={61} style={{height: '250px'}} />
+
+---
+
+<div style={{width: '100vw', height: '100vh'}}>
+  <BuilderSlideSection/>
+</div>

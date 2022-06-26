@@ -22,7 +22,8 @@ export default {
       },
       code: {
         color: "text",
-        backgroundColor: "background"
+        backgroundColor: "background",
+        fontSize: '1.5em'
       },
       tokens: {
         "comment cdata doctype": {

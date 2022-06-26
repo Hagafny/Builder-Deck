@@ -8,9 +8,9 @@ export const BuilderSlideSection = () => {
     const [builderContentJson, setBuilderContentJson] = useState(null)
   
     useEffect(() => { 
-      builder.get('test', { url: window.location.pathname })
+        builder.get('test', { url: window.location.pathname })
         .promise().then(setBuilderContentJson)
     }, [])
   
-    return <BuilderComponent model="test" content={builderContentJson} />
+    return  <BuilderComponent model="test" content={builderContentJson} />       
   }

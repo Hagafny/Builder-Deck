@@ -3,7 +3,7 @@ import { Fireworks }  from './Fireworks';
 
 Builder.registerComponent(Fireworks, {
   name: 'Fireworks',
-  image: 'https://cdn-icons.flaticon.com/png/512/2963/premium/2963356.png?token=exp=1656099867~hmac=33a11d1dbb5cf474916d774c61fe5c00',
+  image: 'https://cdn-icons-png.flaticon.com/512/1054/1054436.png',
   inputs: [
     {
       name: 'text',

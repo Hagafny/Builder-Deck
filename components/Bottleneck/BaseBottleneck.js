@@ -23,7 +23,7 @@ export const BaseBottleneck = ({ mode, children }) => {
 const DepartmentTitles = () => (
     <div style={{ display: 'flex', flexDirection: 'column', position: 'absolute', top: '12%', left: '2px'}}>
         {Object.entries(DEPARTMENTS_COLORS).map(([name, color]) => 
-                  <div style={{color: color, fontSize: '24px', marginBottom: '10px'}}>{name}</div>  
+                  <div key={name} style={{color: color, fontSize: '24px', marginBottom: '10px'}}>{name}</div>  
         )}
     </div>
 )

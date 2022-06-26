@@ -20,5 +20,3 @@ export const Fireworks = ({ text, count, colors, interval = 500 }) => {
     </div>
   )
 }
-
-{/* <Fireworks colors={[{color :'#cc3333'}, {color: '#4CAF50'}, {color: '#81C784'}]} count={5} interval={500} text={"Yo!"} />  */}

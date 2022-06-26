@@ -42,7 +42,7 @@ export const ClosedBottleneck = ({ initialDelay = 200, interval = 300}) => {
 
     return (
         <BaseBottleneck mode={BOTTLENECK_MODE.CLOSED}>
-           {springs.map((springStyle, i) => <AnimatedCircle size={24} color={animations[i].color} springProps={springStyle} />)}
+           {springs.map((springStyle, i) => <AnimatedCircle key={i} size={24} color={animations[i].color} springProps={springStyle} />)}
         </BaseBottleneck>
     )
 }
