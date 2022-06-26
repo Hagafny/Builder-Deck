@@ -1,5 +1,5 @@
 import './styles.css'
-import { Steps, Notes} from 'mdx-deck'
+import { Steps, Notes } from 'mdx-deck'
 import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
 import { vsDark, nightOwl } from '@code-surfer/themes';
 import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
@@ -13,12 +13,14 @@ import { Gauge } from './components/Gauge/Gauge.js'
 import { IntroGrid } from './layouts/IntroGrid.js'
 import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js'
 import { SideBySide } from './layouts/SideBySide.js'
-
+import { DevDependenciesSlide } from './slides/DevDependencies.js'
 import './components/Fireworks/Fireworks.builder.js'
 
 import myTheme from './theme/theme'
 
 export const theme = myTheme
+
+console.log('hi')
 
 <ClosedBottleneck />
 
@@ -87,6 +89,10 @@ export const theme = myTheme
 
 ---
 
+<DevDependenciesSlide />
+
+---
+
 <ImageDeck width={'90%'} height={'90%'} deckImage={DECK_IMAGES.DEV_DEPENDNECIES} />
 
 <Notes>
@@ -102,7 +108,7 @@ export const theme = myTheme
 ---
 
 ## Code releases became the bottleneck of the business
-<ClosedBottleneck initialDelay={4000} interval={300}  />
+<ClosedBottleneck initialDelay={3000} interval={300}  />
 
 ---
 
@@ -113,7 +119,7 @@ export const theme = myTheme
 
 <Steps>
   <div>
-    <Button text="My Button" href="./" />
+    <Button text="Click Me" href="./" />
   </div>
 </Steps>
 
@@ -315,6 +321,7 @@ Builder.registerComponent(Button, {
     <ImageDeck deckImage={DECK_IMAGES.COMPONENTS_ONLY_MODE} width={'100%'} height={'100%'} />
   </RandomlyPlaced>
 </div>
+
 </Steps>
 
 ---

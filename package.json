@@ -19,6 +19,7 @@
     "@mui/material": "^5.8.5",
     "code-surfer": "^3.1.1",
     "fireworks": "^2.2.7",
+    "react-aspect-ratio": "^1.1.2",
     "react-gauge-chart": "^0.4.0",
     "react-spring": "^9.4.5",
     "styled-components": "^5.3.5"
