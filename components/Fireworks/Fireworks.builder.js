@@ -6,12 +6,6 @@ Builder.registerComponent(Fireworks, {
   image: 'https://cdn-icons-png.flaticon.com/512/1054/1054436.png',
   inputs: [
     {
-      name: 'text',
-      type: 'string',
-      required: true,
-      defaultValue: 'Some text...',
-    },
-    {
       name: 'count',
       type: 'number',
       required: true,

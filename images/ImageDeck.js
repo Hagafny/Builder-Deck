@@ -18,7 +18,8 @@ import marketingCorner from '../images/marketingCorner.png'
 import designCorner from '../images/designCorner.png'
 import productCorner from '../images/productCorner.png'
 import operationsCorner from '../images/operationsCorner.png'
-
+import builder1 from '../images/builder1.png'
+import builder2 from '../images/builder2.png'
 
 export const DECK_IMAGES = {
     RON: 'ron.png',
@@ -38,6 +39,8 @@ export const DECK_IMAGES = {
     DESIGN_CORNER: 'designCorner.png',
     PRODUCT_CORNER: 'productCorner.png',
     OPERATIONS_CORNER: 'operationsCorner.png',
+    BUILDER_1: 'builder1.png',
+    BUILDER_2: 'builder2.png'
 
 }
 
@@ -59,6 +62,8 @@ const IMAGES = {
     [DECK_IMAGES.DESIGN_CORNER]: designCorner,
     [DECK_IMAGES.PRODUCT_CORNER]: productCorner,
     [DECK_IMAGES.OPERATIONS_CORNER]: operationsCorner,
+    [DECK_IMAGES.BUILDER_1]: builder1,
+    [DECK_IMAGES.BUILDER_2]: builder2,
 }
 
 export const ImageDeck = ({ deckImage, width, height, style = {} }) => {

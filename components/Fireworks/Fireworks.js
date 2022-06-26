@@ -1,7 +1,7 @@
 import React from 'react'
 import { Fireworks as FX } from 'fireworks/lib/react'
 
-export const Fireworks = ({ text, count, colors, interval = 500 }) => {
+export const Fireworks = ({ count, colors, interval = 500 }) => {
   const fxProps = {
     count,
     interval,
@@ -13,10 +13,6 @@ export const Fireworks = ({ text, count, colors, interval = 500 }) => {
     })
   }
 
-  return (
-    <div style={{textAlign: 'center'}}>
-      <FX {...fxProps} />
-      <h1>{text}</h1>
-    </div>
-  )
+  return <FX {...fxProps} />
+  
 }
