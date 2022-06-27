@@ -77,13 +77,10 @@ const IMAGES = {
   [DECK_IMAGES.BUILDER_2]: builder2,
   [DECK_IMAGES.ROCKET]: rocket,
   [DECK_IMAGES.SEO]: seo,
-<<<<<<< HEAD
   [DECK_IMAGES.FAQ_END_1]: faqEnd1,
   [DECK_IMAGES.FAQ_END_2]: faqEnd2,
   [DECK_IMAGES.FAQ_END_3]: faqEnd3,
-=======
   [DECK_IMAGES.OPEN_BOTTLE]: openBottle,
->>>>>>> 44997d3e78814c1ebc173b04694e215562ae100c
 };
 
 export const ImageDeck = ({ deckImage, width, height, style = {} }) => {

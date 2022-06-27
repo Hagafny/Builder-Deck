@@ -49,8 +49,6 @@ export const theme = myTheme;
 
   <Steps>
 
-{' '}
-
 <ImageDeck
   width={'50%'}
   height={'50%'}
@@ -240,7 +238,7 @@ export async function getStaticProps() {
     userAttributes: {
       urlPath: '/faq'
     }
-  }).promise()
+  })
 
   return {
     props: {
@@ -265,7 +263,7 @@ export async function getStaticProps() {
     userAttributes: {
       urlPath: '/faq'
     }
-  }).promise()
+  })
 
   return {
     props: {
@@ -287,7 +285,7 @@ export async function getStaticProps() {
     userAttributes: {
       urlPath: '/faq'
     }
-  }).promise()
+  })
 
   return {
     props: {
@@ -348,9 +346,9 @@ export async function getStaticProps() {
 import React from 'react';
 import MuiButton from '@mui/material/Button';
 
-const Button = ({ text, link, type }) => {
+const Button = ({ text, link }) => {
   return (
-    <MuiButton text={text} href={link} variant={type}>
+    <MuiButton text={text} href={link}>
       {text}
     </MuiButton>
   );
@@ -372,9 +370,9 @@ export default Button;
 import React from 'react';
 import MuiButton from '@mui/material/Button';
 
-const Button = ({ text, link, type }) => {
+const Button = ({ text, link }) => {
   return (
-    <MuiButton text={text} href={link} variant={type}>
+    <MuiButton text={text} href={link}>
       {text}
     </MuiButton>
   );
@@ -384,7 +382,7 @@ export default Button;
 ```
 
 ```js
-
+ 
 ```
 
 </Step>
@@ -396,9 +394,9 @@ export default Button;
 import React from 'react';
 import MuiButton from '@mui/material/Button';
 
-const Button = ({ text, link, type }) => {
+const Button = ({ text, link }) => {
   return (
-    <MuiButton text={text} href={link} variant={type}>
+    <MuiButton text={text} href={link}>
       {text}
     </MuiButton>
   );
@@ -424,13 +422,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    },
-    {
-      name: 'type',
-      type: 'string',
-      enum: ['outlined', 'text', 'contained'],
-      defaultValue: 'contained',
-    },
+    }
   ],
 });
 ```
@@ -444,9 +436,9 @@ Builder.registerComponent(Button, {
 import React from 'react';
 import MuiButton from '@mui/material/Button';
 
-const Button = ({ text, link, type }) => {
+const Button = ({ text, link }) => {
   return (
-    <MuiButton text={text} href={link} variant={type}>
+    <MuiButton text={text} href={link}>
       {text}
     </MuiButton>
   );
@@ -472,13 +464,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    },
-    {
-      name: 'type',
-      type: 'string',
-      enum: ['outlined', 'text', 'contained'],
-      defaultValue: 'contained',
-    },
+    }
   ],
 });
 ```
@@ -509,13 +495,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    },
-    {
-      name: 'type',
-      type: 'string',
-      enum: ['outlined', 'text', 'contained'],
-      defaultValue: 'contained',
-    },
+    }
   ],
 });
 ```
