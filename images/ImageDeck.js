@@ -22,6 +22,9 @@ import builder1 from '../images/builder1.png';
 import builder2 from '../images/builder2.png';
 import seo from '../images/seo.png';
 import rocket from '../images/rocket.png';
+import faqEnd1 from '../images/faq_end_1.png';
+import faqEnd2 from '../images/faq_end_2.png';
+import faqEnd3 from '../images/faq_end_3.png';
 
 export const DECK_IMAGES = {
   RON: 'ron.png',
@@ -45,6 +48,9 @@ export const DECK_IMAGES = {
   BUILDER_2: 'builder2.png',
   ROCKET: 'rocket.png',
   SEO: 'seo.png',
+  FAQ_END_1: 'faq_end_1.png',
+  FAQ_END_2: 'faq_end_2.png',
+  FAQ_END_3: 'faq_end_3.png',
 };
 
 const IMAGES = {
@@ -69,6 +75,9 @@ const IMAGES = {
   [DECK_IMAGES.BUILDER_2]: builder2,
   [DECK_IMAGES.ROCKET]: rocket,
   [DECK_IMAGES.SEO]: seo,
+  [DECK_IMAGES.FAQ_END_1]: faqEnd1,
+  [DECK_IMAGES.FAQ_END_2]: faqEnd2,
+  [DECK_IMAGES.FAQ_END_3]: faqEnd3,
 };
 
 export const ImageDeck = ({ deckImage, width, height, style = {} }) => {

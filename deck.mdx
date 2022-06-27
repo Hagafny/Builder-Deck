@@ -16,6 +16,7 @@ import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
 import { SideBySide } from './layouts/SideBySide.js';
 import { DevDependenciesSlide } from './slides/DevDependencies.js';
 
+
 import myTheme from './theme/theme';
 
 export const theme = myTheme;
@@ -164,7 +165,7 @@ _With great traction, comes great responsibility_
 
 <CodeSurfer theme={vsDark}>
 
-```js
+```js showNumbers
 const FaqPage = ({ data }) => {
   return (
     <>
@@ -175,7 +176,7 @@ const FaqPage = ({ data }) => {
 }
 ````
 
-```js
+```js 10:19
 const FaqPage = ({ data }) => {
   return (
     <>
@@ -186,8 +187,8 @@ const FaqPage = ({ data }) => {
 }
 
 export async function getStaticProps() {
-  // Get Data from external API
-  const data = getFaqData()
+  // Get data from external API
+  const data = await getFaqData()
 
   return {
     props: {
@@ -197,7 +198,113 @@ export async function getStaticProps() {
 }
 ````
 
+```js 1[16:26],12:17
+const FaqPage = ({ data }) => {
+  return (
+    <>
+      <h1>FAQ</h1>
+      <FaqList data={data} />
+    </>
+  )
+}
+
+export async function getStaticProps() {
+  // Get data from external API
+  const data = await getFaqData()
+
+  return {
+    props: {
+      data
+    }
+  }
+}
+````
+
+```js 10:22
+const FaqPage = ({ data }) => {
+  return (
+    <>
+      <h1>FAQ</h1>
+      <FaqList data={data} />
+    </>
+  )
+}
+
+export async function getStaticProps() {
+  const faqPageContent = await builder.get('page', {
+    userAttributes: {
+      urlPath: '/faq'
+    }
+  }).promise()
+
+  return {
+    props: {
+      faqPageContent
+    }
+  }
+}
+````
+
+```js 1:8
+const FaqPage = ({ data }) => {
+  return (
+    <>
+      <h1>FAQ</h1>
+      <FaqList data={data} />
+    </>
+  )
+}
+
+export async function getStaticProps() {
+  const faqPageContent = await builder.get('page', {
+    userAttributes: {
+      urlPath: '/faq'
+    }
+  }).promise()
+
+  return {
+    props: {
+      faqPageContent
+    }
+  }
+}
+````
+
+```js 1:5
+const FaqPage = ({ faqPageContent }) => {
+  return (
+    <BuilderComponent mode="page" content={faqPageContent}>
+  )
+}
+
+export async function getStaticProps() {
+  const pageContent = await builder.get('page', {
+    userAttributes: {
+      urlPath: '/faq'
+    }
+  }).promise()
+
+  return {
+    props: {
+      pageContent
+    }
+  }
+}
+````
+
 </CodeSurfer>
+
+---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_1} styles={{backgroundSize: 'cover'}} />
+
+---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_2} styles={{backgroundSize: 'cover'}} />
+
+---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_3} styles={{backgroundSize: 'cover'}} />
 
 ---
 
@@ -216,7 +323,7 @@ export async function getStaticProps() {
     deckImage={DECK_IMAGES.DESIGN_SYSTEM}
     style={{ width: '64px', height: '64px', marginTop: '11px' }}
   />
->>>>>>> 8b127ebc61af0df53f39cab6d0cec92ec62dfd41
+
 </div>
 
 <Steps>
