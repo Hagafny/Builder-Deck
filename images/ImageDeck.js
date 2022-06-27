@@ -3,6 +3,7 @@ import { Image } from 'mdx-deck';
 
 import ron from '../images/ron.png';
 import bottle from '../images/bottleneck2.png';
+import openBottle from '../images/openBottle.png';
 import devDep from '../images/depDependencies.jpeg';
 import easyplant from '../images/easyplant.png';
 import mixtiles from '../images/mixtiles.png';
@@ -29,6 +30,7 @@ import faqEnd3 from '../images/faq_end_3.png';
 export const DECK_IMAGES = {
   RON: 'ron.png',
   BOTTLE: 'bottleneck2.png',
+  OPEN_BOTTLE: 'openBottle.png',
   DEV_DEPENDNECIES: 'devDependencies.jpeg',
   EASYPLANT: 'easyplant.png',
   MIXTILES: 'mixtiles.png',
@@ -75,9 +77,13 @@ const IMAGES = {
   [DECK_IMAGES.BUILDER_2]: builder2,
   [DECK_IMAGES.ROCKET]: rocket,
   [DECK_IMAGES.SEO]: seo,
+<<<<<<< HEAD
   [DECK_IMAGES.FAQ_END_1]: faqEnd1,
   [DECK_IMAGES.FAQ_END_2]: faqEnd2,
   [DECK_IMAGES.FAQ_END_3]: faqEnd3,
+=======
+  [DECK_IMAGES.OPEN_BOTTLE]: openBottle,
+>>>>>>> 44997d3e78814c1ebc173b04694e215562ae100c
 };
 
 export const ImageDeck = ({ deckImage, width, height, style = {} }) => {
