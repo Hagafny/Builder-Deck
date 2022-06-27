@@ -36,3 +36,7 @@ ul li::before {
   left: 32px;
   bottom: -24px;
 }
+
+a {
+  color: #ff0072;
+}

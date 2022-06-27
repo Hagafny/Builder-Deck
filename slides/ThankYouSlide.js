@@ -4,9 +4,9 @@ import { BuilderSlideSection } from '../components/BuilderSlideSection/BuilderSl
 import { SpeechBubble } from '../components/SpeechBubble/SpeechBubble.js';
 
 
-const mixtilesImage = <ImageDeck  style={{ width: '150px', height: '150px' }} deckImage={DECK_IMAGES.MIXTILES}/>
-const twitterImage = <ImageDeck  style={{ width: '150px', height: '150px' }} deckImage={DECK_IMAGES.MIXTILES}/>
-const potImage = <ImageDeck  style={{ width: '150px', height: '150px' }} deckImage={DECK_IMAGES.MIXTILES}/>
+const mixtilesImage = <ImageDeck style={{ width: '128px', height: '128px' }} deckImage={DECK_IMAGES.MIXTILES}/>
+const twitterImage = <ImageDeck style={{ width: '128px', height: '128px' }} deckImage={DECK_IMAGES.TWITTER}/>
+const potImage = <ImageDeck style={{ width: '128px', height: '128px' }} deckImage={DECK_IMAGES.POT}/>
 
 export const ThankYouSlide = () => {
   const [position, setPosition] = useState([]);
@@ -43,9 +43,9 @@ export const ThankYouSlide = () => {
           justifyContent: 'center',
         }}
       >
-        <Logo imageComp={mixtilesImage}>Check us out yo!</Logo>
-        <Logo imageComp={twitterImage}>@hagafny</Logo>
-        <Logo imageComp={potImage}>www.proofoftalk.com</Logo>
+        <Logo imageComp={mixtilesImage}><a href="www.mixtiles.com/dev" target="_blank" rel="noreferrer">www.mixtiles.com/dev</a></Logo>
+        <Logo imageComp={twitterImage}><a href="https://twitter.com/TheGafny" target="_blank" rel="noreferrer">@TheGafny</a></Logo>  
+        <Logo imageComp={potImage}><a href="https://proofoftalk.com" target="_blank" rel="noreferrer">Proof of Talk Podcast</a></Logo>
       </div>
       <BuilderSlideSection />
       <SpeechBubble {...{ top, left }} content={'Thank you for listening!'} />
@@ -62,7 +62,7 @@ const Logo = ({
       style={{
         margin: '40px',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
       }}
     >

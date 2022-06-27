@@ -22,11 +22,12 @@ import rocket from '../images/rocket.png';
 import faqEnd1 from '../images/faq_end_1.png';
 import faqEnd2 from '../images/faq_end_2.png';
 import faqEnd3 from '../images/faq_end_3.png';
-
 import developers from '../images/developers.png';
 import marketing from '../images/marketing.png';
 import product from '../images/product.png';
 import design from '../images/design.png';
+import twitter from '../images/twitter.png';
+import pot from '../images/pot.png';
 
 export const DECK_IMAGES = {
   RON: 'ron.png',
@@ -50,12 +51,12 @@ export const DECK_IMAGES = {
   FAQ_END_1: 'faq_end_1.png',
   FAQ_END_2: 'faq_end_2.png',
   FAQ_END_3: 'faq_end_3.png',
-
   DEVELOPERS: 'developers.png',
   MARKETING: 'marketing.png',
   PRODUCT: 'product.png',
   DESIGN: 'design.png',
-
+  TWITTER: 'twitter.png',
+  POT: '../images/pot.png'
 };
 
 const IMAGES = {
@@ -80,12 +81,12 @@ const IMAGES = {
   [DECK_IMAGES.FAQ_END_2]: faqEnd2,
   [DECK_IMAGES.FAQ_END_3]: faqEnd3,
   [DECK_IMAGES.OPEN_BOTTLE]: openBottle,
-
   [DECK_IMAGES.DEVELOPERS]: developers,
   [DECK_IMAGES.MARKETING]: marketing,
   [DECK_IMAGES.PRODUCT]: product,
   [DECK_IMAGES.DESIGN]: design,
-
+  [DECK_IMAGES.TWITTER]: twitter,
+  [DECK_IMAGES.POT]: pot
 };
 
 export const ImageDeck = ({ deckImage, width, height, style = {} }) => {
