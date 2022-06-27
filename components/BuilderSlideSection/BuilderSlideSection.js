@@ -5,14 +5,15 @@ import config from '../../config';
 
 builder.init(config.BUILDER_API_KEY);
 
-export const BuilderSlideSection = () => {
+export const BuilderSlideSection = ({ onLoad = () => undefined }) => {
   const [builderContentJson, setBuilderContentJson] = useState(null);
 
   useEffect(() => {
     builder
       .get('slide', { url: window.location.pathname })
       .promise()
-      .then(setBuilderContentJson);
+      .then(setBuilderContentJson)
+      .then(onLoad);
   }, []);
 
   return <BuilderComponent model='slide' content={builderContentJson} />;
