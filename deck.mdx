@@ -13,19 +13,17 @@ import { FadeIn } from './components/FadeIn.js';
 import { Gauge } from './components/Gauge/Gauge.js';
 import { IntroGrid } from './layouts/IntroGrid.js';
 import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
+import { KawaiiWrapper } from './components/KawaiiWrapper/KawaiiWrapper.js';
+import './components/KawaiiWrapper/KawaiiWrapper.builder.js';
 import { SideBySide } from './layouts/SideBySide.js';
-import { DevDependenciesSlide } from './slides/DevDependencies.js';
+import { DevDependenciesSlide } from './slides/DevDependencies.jPs';
 
 
 import myTheme from './theme/theme';
 
 export const theme = myTheme;
 
-<ClosedBottleneck />
-
----
-
-<OpenBottleneck />
+<BuilderSlideSection />
 
 ---
 
@@ -162,7 +160,12 @@ _With great traction, comes great responsibility_
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
@@ -175,9 +178,9 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  )
-}
-````
+  );
+};
+```
 
 ```js 10:19
 const FaqPage = ({ data }) => {
@@ -186,8 +189,8 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   // Get data from external API
@@ -195,11 +198,11 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
-````
+```
 
 ```js 1[16:26],12:17
 const FaqPage = ({ data }) => {
@@ -326,7 +329,6 @@ export async function getStaticProps() {
     deckImage={DECK_IMAGES.DESIGN_SYSTEM}
     style={{ width: '64px', height: '64px', marginTop: '11px' }}
   />
-
 </div>
 
 <Steps>
