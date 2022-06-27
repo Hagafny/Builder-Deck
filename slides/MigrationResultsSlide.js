@@ -2,7 +2,7 @@ import React from 'react';
 import { ZoomSteps } from '../components/ZoomSteps/ZoomSteps.js';
 import { ImageDeck, DECK_IMAGES } from '../images/ImageDeck';
 
-export const SummarySlide = () => {
+export const MigrationResultsSlide = () => {
   return (
     <div
       style={{
@@ -16,12 +16,12 @@ export const SummarySlide = () => {
       }}
     >
       <ZoomSteps>
+        <GridWrapper image={DECK_IMAGES.ROCKET} />
         <GridWrapper image={DECK_IMAGES.SEO} />
-        <GridWrapper image={DECK_IMAGES.SEO} />
-        <GridWrapper image={DECK_IMAGES.SEO} />
-        <GridWrapper image={DECK_IMAGES.SEO} />
-        <GridWrapper image={DECK_IMAGES.SEO} />
-        <GridWrapper image={DECK_IMAGES.SEO} />
+        <GridWrapper image={DECK_IMAGES.MARKETING} />
+        <GridWrapper image={DECK_IMAGES.PRODUCT} />
+        <GridWrapper image={DECK_IMAGES.DESIGN} />
+        <GridWrapper image={DECK_IMAGES.DEVELOPERS} />
       </ZoomSteps>
     </div>
   );
@@ -37,7 +37,7 @@ const GridWrapper = ({ image, style }) => (
   >
     <ImageDeck
       deckImage={image}
-      style={{ width: '128px', height: '128px', ...style }}
+      style={{ width: '256px', height: '256px', ...style }}
     />
   </div>
 );

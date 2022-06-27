@@ -46,13 +46,3 @@ const DepartmentTitles = () => (
     ))}
   </div>
 );
-
-const OpenBottleContainer = () => (
-  <div
-    style={{
-      height: '180px',
-      borderTop: '2px solid black',
-      borderBottom: '2px solid black',
-    }}
-  ></div>
-);
