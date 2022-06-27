@@ -10,14 +10,14 @@ Builder.registerComponent(KawaiiWrapper, {
       type: 'enum',
       required: true,
       enum: ['Chocolate', 'Ice Cream', 'Planet'],
-      defaultValue: 'chocolate',
+      defaultValue: 'Chocolate',
     },
     {
       name: 'mood',
       type: 'string',
       required: true,
       enum: ['Blissful', 'Shocked', 'Love Struck'],
-      defaultValue: 'blissful',
+      defaultValue: 'Blissful',
     },
     {
       name: 'color',
