@@ -18,6 +18,7 @@ import { ThankYouSlide } from './slides/ThankYouSlide.js';
 import myTheme from './theme/theme';
 import { MigrationResultsSlide } from './slides/MigrationResultsSlide.js';
 import { SlideLayout } from './layouts/SlideLayout.js'
+import { BuilderSlide } from './slides/BuilderSlide.js'
 
 export const theme = myTheme;
 
@@ -540,10 +541,7 @@ Builder.registerComponent(Button, {
 
 ---
 
-<SideBySide>
-  <div style={{display:'flex', justifyContent: 'center', alignItems: 'center', fontSize: '40px', textAlign: 'center', fontWeight: 'bold', marginLeft: '30px'}}>What if I told you it is integrated right here -></div>
-  <div style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}> <BuilderSlideSection /></div>
-</SideBySide>
+<BuilderSlide />
 
 ---
 
@@ -570,6 +568,24 @@ export const BuilderSlideSection = () => {
   return <BuilderComponent model='slide' content={builderContentJson} />;
 };
 ```
+
+```js showNumbers 6
+// SlideSction.js
+import React, { useState, useEffect } from 'react';
+import { BuilderComponent, builder } from '@builder.io/react';
+
+export const BuilderSlideSection = () => {
+  const [builderContentJson, setBuilderContentJson] = useState(null);
+
+  useEffect(() => {
+    builder
+      .get('slide', { url: window.location.pathname })
+      .then(setBuilderContentJson);
+  }, []);
+
+  return <BuilderComponent model='slide' content={builderContentJson} />;
+};
+````
 
 ```js showNumbers 8:12
 // SlideSction.js
@@ -611,6 +627,9 @@ export const BuilderSlideSection = () => {
 
 ---
 
+<BuilderSlide />
+
+---
 <div
   style={{
     width: '100vh',
