@@ -8,15 +8,17 @@ export const BOTTLENECK_MODE = {
 };
 
 export const BaseBottleneck = ({ mode, children }) => {
-  const bottleComponent =
-    mode === BOTTLENECK_MODE.CLOSED ? (
-      <ImageDeck deckImage={DECK_IMAGES.BOTTLE} />
-    ) : (
-      <OpenBottleContainer />
-    );
+  const bottleComponent = <ImageDeck deckImage={mode === BOTTLENECK_MODE.CLOSED ? DECK_IMAGES.BOTTLE : DECK_IMAGES.OPEN_BOTTLE} />;
 
   return (
-    <div style={{ position: 'relative', height: '22%', width: '40%' }}>
+    <div
+      style={{
+        transform: 'scale(2)',
+        position: 'relative',
+        height: '22%',
+        width: '40%',
+      }}
+    >
       {bottleComponent}
       <DepartmentTitles />
       {children}
@@ -30,8 +32,8 @@ const DepartmentTitles = () => (
       display: 'flex',
       flexDirection: 'column',
       position: 'absolute',
-      top: '12%',
-      left: '2px',
+      top: '25%',
+      left: '5%',
     }}
   >
     {Object.entries(DEPARTMENTS_COLORS).map(([name, color]) => (
