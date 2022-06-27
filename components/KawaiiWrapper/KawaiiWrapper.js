@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { IceCream, Chocolate, Planet } from 'react-kawaii';
+import { IceCream, Chocolate, Backpack } from 'react-kawaii';
 
 export const KawaiiWrapper = ({
   character = 'Chocolate',
   mood = 'Blissful',
   color = '#fc105c',
-  size = 800,
+  size = 750,
 }) => {
   useEffect(() => {
     localStorage.setItem('character-value', character);
@@ -13,8 +13,8 @@ export const KawaiiWrapper = ({
   let Kawaii;
 
   switch (character) {
-    case 'Planet':
-      Kawaii = Planet;
+    case 'Backpack':
+      Kawaii = Backpack;
       break;
     case 'Ice Cream':
       Kawaii = IceCream;

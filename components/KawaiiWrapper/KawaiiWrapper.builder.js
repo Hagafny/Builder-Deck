@@ -9,7 +9,7 @@ Builder.registerComponent(KawaiiWrapper, {
       name: 'character',
       type: 'enum',
       required: true,
-      enum: ['Chocolate', 'Ice Cream', 'Planet'],
+      enum: ['Chocolate', 'Backpack', 'Ice Cream'],
       defaultValue: 'Chocolate',
     },
     {

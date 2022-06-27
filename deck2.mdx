@@ -628,6 +628,23 @@ export const BuilderSlideSection = () => {
 
 ---
 
+<div
+  style={{
+    width: '100vh',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  }}
+>
+  <ZoomSteps>
+    <ImageDeck deckImage={DECK_IMAGES.NEXT_JS} style={{ width: '256px', height: '256px' }}/>
+    <ImageDeck deckImage={DECK_IMAGES.BUILDER} style={{ width: '256px', height: '256px' }}/> 
+  </ZoomSteps>
+</div>
+
+---
+
 <SlideLayout title='Start moving from here'>
   <ClosedBottleneck initialDelay={0} interval={100} />
 </SlideLayout>

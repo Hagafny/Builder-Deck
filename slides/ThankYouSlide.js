@@ -3,8 +3,14 @@ import { ImageDeck, DECK_IMAGES } from '../images/ImageDeck.js';
 import { BuilderSlideSection } from '../components/BuilderSlideSection/BuilderSlideSection.js';
 import { SpeechBubble } from '../components/SpeechBubble/SpeechBubble.js';
 
+
+const mixtilesImage = <ImageDeck  style={{ width: '150px', height: '150px' }} deckImage={DECK_IMAGES.MIXTILES}/>
+const twitterImage = <ImageDeck  style={{ width: '150px', height: '150px' }} deckImage={DECK_IMAGES.MIXTILES}/>
+const potImage = <ImageDeck  style={{ width: '150px', height: '150px' }} deckImage={DECK_IMAGES.MIXTILES}/>
+
 export const ThankYouSlide = () => {
   const [position, setPosition] = useState([]);
+
   const character = localStorage
     .getItem('character-value')
     .split(' ')
@@ -14,8 +20,9 @@ export const ThankYouSlide = () => {
   const [top, left] = position;
 
   useEffect(() => {
+    console.log('my character', character)
     setPosition(getPositionByCharacter(character));
-  }, [character]);
+  }, [character, setPosition]);
 
   return (
     <div
@@ -36,9 +43,9 @@ export const ThankYouSlide = () => {
           justifyContent: 'center',
         }}
       >
-        <Logo />
-        <Logo />
-        <Logo />
+        <Logo imageComp={mixtilesImage}>Check us out yo!</Logo>
+        <Logo imageComp={twitterImage}>@hagafny</Logo>
+        <Logo imageComp={potImage}>www.proofoftalk.com</Logo>
       </div>
       <BuilderSlideSection />
       <SpeechBubble {...{ top, left }} content={'Thank you for listening!'} />
@@ -47,8 +54,8 @@ export const ThankYouSlide = () => {
 };
 
 const Logo = ({
-  image = DECK_IMAGES.MIXTILES,
-  content = 'ABC ABC ABC ABC ABC',
+  imageComp,
+  children
 }) => {
   return (
     <div
@@ -59,18 +66,15 @@ const Logo = ({
         alignItems: 'center',
       }}
     >
-      <ImageDeck
-        style={{ width: '150px', height: '150px' }}
-        deckImage={image}
-      />
-      <span>{content}</span>
+      {imageComp}
+      {children}
     </div>
   );
 };
 
 const getPositionByCharacter = (character) =>
   ({
-    chocolate: [55, 60],
-    'ice-cream': [35, 61],
-    planet: [37, 68],
+    chocolate: [45, 72],
+    'ice-cream': [14, 72],
+    backpack: [23, 73],
   }[character || 'chocolate']);
