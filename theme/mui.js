@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
-import base from './base'
-const { TEXT, BACKGROUND, PRIMARY } = base
+import base from './base';
+const { TEXT, BACKGROUND, PRIMARY } = base;
 
 const muiTheme = createTheme({
   colors: {
@@ -9,12 +9,11 @@ const muiTheme = createTheme({
     green2: '#4E734E',
     green3: '#47634E',
     green4: '#90A195',
-},
+  },
   palette: {
     type: 'light',
     primary: {
-      main: TEXT
-      ,
+      main: TEXT,
     },
     secondary: {
       main: PRIMARY,
@@ -23,19 +22,19 @@ const muiTheme = createTheme({
       default: BACKGROUND,
     },
     text: {
-      primary: TEXT
-    }
+      primary: TEXT,
+    },
   },
   components: {
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
-      }
+      },
     },
-    MuiButton:{
+    MuiButton: {
       defaultProps: {
         variant: 'contained',
-        color: 'secondary'
+        color: 'secondary',
       },
       styleOverrides: {
         root: {
@@ -43,11 +42,11 @@ const muiTheme = createTheme({
           borderRadius: '8px',
           fontSize: '1.625rem',
           fontWeight: 600,
-          lineHeight: '34px'
+          lineHeight: '34px',
         },
-      }
+      },
     },
   },
-})
+});
 
-export default muiTheme
+export default muiTheme;

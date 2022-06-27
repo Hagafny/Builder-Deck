@@ -5,11 +5,11 @@ function useZoomChildrenSteps(children) {
   const step = useSteps(React.Children.count(children) - 1);
   const normal = {
     transition: 'transform .5s ease',
-    transform: 'scale(1)'
+    transform: 'scale(1)',
   };
   const zoomed = {
     transition: 'transform .5s ease',
-    transform: 'scale(1.4)'
+    transform: 'scale(1.4)',
   };
   return React.Children.map(children, (child, index) => {
     const style = child.props ? child.props.style : {};
@@ -22,9 +22,6 @@ function useZoomChildrenSteps(children) {
   });
 }
 
-
 export function ZoomSteps({ children }) {
   return useZoomChildrenSteps(children);
 }
-
-
