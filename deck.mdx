@@ -16,14 +16,13 @@ import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
 import { KawaiiWrapper } from './components/KawaiiWrapper/KawaiiWrapper.js';
 import './components/KawaiiWrapper/KawaiiWrapper.builder.js';
 import { SideBySide } from './layouts/SideBySide.js';
-import { DevDependenciesSlide } from './slides/DevDependencies.jPs';
-
+import { DevDependenciesSlide } from './slides/DevDependencies.js';
 
 import myTheme from './theme/theme';
 
 export const theme = myTheme;
 
-<BuilderSlideSection />
+<BuilderSlideSection  />
 
 ---
 
@@ -367,7 +366,7 @@ export default Button;
 
 <Step>
 
-```js showNumbers 5[16:38]
+```js showNumbers 5[16:31]
 // Button.js
 import React from 'react';
 import MuiButton from '@mui/material/Button';
@@ -391,7 +390,7 @@ export default Button;
 
 <Step>
 
-```js showNumbers 5[16:38]
+```js showNumbers 5[16:31]
 // Button.js
 import React from 'react';
 import MuiButton from '@mui/material/Button';
@@ -433,7 +432,7 @@ Builder.registerComponent(Button, {
 
 <Step>
 
-```js showNumbers 5[16:38]
+```js showNumbers 5[16:31]
 // Button.js
 import React from 'react';
 import MuiButton from '@mui/material/Button';
@@ -528,26 +527,6 @@ Builder.registerComponent(Button, {
 </div>
 
 </Steps>
-
----
-
-<div style={{ width: '100vw', height: '100vh' }}>
-  <BuilderSlideSection />
-</div>
-
----
-
-<CodeSurfer theme={vsDark}>
-
-```js
-<Fireworks
-  count={3}
-  colors={['#cc3333', '#4CAF50', '#81C784']}
-  interval={500}
-/>
-```
-
-</CodeSurfer>
 
 ---
 
