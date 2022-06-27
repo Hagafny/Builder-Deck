@@ -7,7 +7,7 @@ export const SideBySide = ({ children, style }) => (
       display: 'grid',
       alignItems: 'center',
       gridTemplateColumns: '1fr 1fr',
-      ...style
+      ...style,
     }}
   >
     {children}

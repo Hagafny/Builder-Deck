@@ -1,24 +1,28 @@
-import './styles.css'
-import { Steps, Notes } from 'mdx-deck'
+import './styles.css';
+import { Steps, Notes } from 'mdx-deck';
 import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
 import { vsDark, nightOwl } from '@code-surfer/themes';
-import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
-import { Button } from './components/Button/Button.js'
-import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js'
-import { OpenBottleneck } from './components/Bottleneck/OpenBottleneck.js'
+import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js';
+import { Button } from './components/Button/Button.js';
+import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js';
+import { OpenBottleneck } from './components/Bottleneck/OpenBottleneck.js';
 
-import { RandomlyPlaced } from './layouts/RandomlyPlaced.js'
-import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js'
-import { FadeIn } from './components/FadeIn.js'
-import { Gauge } from './components/Gauge/Gauge.js'
-import { IntroGrid } from './layouts/IntroGrid.js'
-import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js'
-import { SideBySide } from './layouts/SideBySide.js'
-import { DevDependenciesSlide } from './slides/DevDependencies.js'
+import { RandomlyPlaced } from './layouts/RandomlyPlaced.js';
+import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js';
+import { FadeIn } from './components/FadeIn.js';
+import { Gauge } from './components/Gauge/Gauge.js';
+import { IntroGrid } from './layouts/IntroGrid.js';
+import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
+import { SideBySide } from './layouts/SideBySide.js';
+import { DevDependenciesSlide } from './slides/DevDependencies.js';
 
-import myTheme from './theme/theme'
+import myTheme from './theme/theme';
 
-export const theme = myTheme
+export const theme = myTheme;
+
+# Bla Bla
+
+<ClosedBottleneck />
 
 # Code or No-Code: Why not both? 🤷‍♀️
 
@@ -40,31 +44,61 @@ export const theme = myTheme
 
   <Steps>
 
-  <ImageDeck width={'50%'} height={'50%'} deckImage={DECK_IMAGES.MIXTILES}  style={ {gridRow:'2/3', gridColumn:'1/2'}} />
-  <ImageDeck width={'50%'} height={'50%'} deckImage={DECK_IMAGES.EASYPLANT} style={ {gridRow:'1/2', gridColumn:'2/3'}} />
+{' '}
+<ImageDeck
+  width={'50%'}
+  height={'50%'}
+  deckImage={DECK_IMAGES.MIXTILES}
+  style={{ gridRow: '2/3', gridColumn: '1/2' }}
+/>
+<ImageDeck
+  width={'50%'}
+  height={'50%'}
+  deckImage={DECK_IMAGES.EASYPLANT}
+  style={{ gridRow: '1/2', gridColumn: '2/3' }}
+/>
 
   </Steps>
 </IntroGrid>
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.HOMEPAGE} styles={{backgroundSize: 'cover'}} />
-
- ---
-
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.COLLECTIONS} styles={{backgroundSize: 'cover'}} />
-
----
-
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.HOMEPAGE}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
-*With great traction, comes great responsibility*
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.COLLECTIONS}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
-<ImageDeck width={'90%'} height={'90%'} deckImage={DECK_IMAGES.DEV_DEPENDNECIES} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ}
+  styles={{ backgroundSize: 'cover' }}
+/>
+
+---
+
+_With great traction, comes great responsibility_
+
+---
+
+<ImageDeck
+  width={'90%'}
+  height={'90%'}
+  deckImage={DECK_IMAGES.DEV_DEPENDNECIES}
+/>
 
 <Notes>
 
@@ -79,28 +113,47 @@ export const theme = myTheme
 ---
 
 ## Code releases became the bottleneck of the business
-<ClosedBottleneck initialDelay={3000} interval={300}  />
+
+<ClosedBottleneck initialDelay={3000} interval={300} />
 
 ---
 
-<div style={{width: '20%', height: '20%'}}>
+<div style={{ width: '20%', height: '20%' }}>
   <ImageDeck deckImage={DECK_IMAGES.BUILDER} />
 </div>
 
 <ImageDeck deckImage={DECK_IMAGES.BUILDER_1} width={'50%'} height={'50%'} />
 
+---
+
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.BUILDER_2}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.BUILDER_2} styles={{backgroundSize: 'cover'}} />
-
----
-
-<div style={{ width: '100vh', height: '100vh', display: 'flex', alignItems:'center', justifyContent: 'space-between'}}>
-<ZoomSteps>
-  <ImageDeck deckImage={DECK_IMAGES.ROCKET} style={{ width: '128px', height: '128px' }} />
-  <ImageDeck deckImage={DECK_IMAGES.SEO} style={{ width: '128px', height: '128px' }} />
-</ZoomSteps>
+<div
+  style={{
+    width: '100vh',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  }}
+>
+  <ZoomSteps>
+    <ImageDeck
+      deckImage={DECK_IMAGES.ROCKET}
+      style={{ width: '128px', height: '128px' }}
+    />
+    <ImageDeck
+      deckImage={DECK_IMAGES.SEO}
+      style={{ width: '128px', height: '128px' }}
+    />
+  </ZoomSteps>
 </div>
 
 ---
@@ -148,14 +201,27 @@ export async function getStaticProps() {
 
 ---
 
-<div style={{display: 'flex', justifyContent: 'center', alinItems:'center', marginBottom: '30px'}}>
-  <h1 style={{marginTop: 0, marginBottom: 0, marginLeft: 0}}>Design System</h1>
-  <ImageDeck deckImage={DECK_IMAGES.DESIGN_SYSTEM} style={{ width: '64px', height: '64px', marginTop: '11px' }} />
+<div
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alinItems: 'center',
+    marginBottom: '30px',
+  }}
+>
+  <h1 style={{ marginTop: 0, marginBottom: 0, marginLeft: 0 }}>
+    Design System
+  </h1>
+  <ImageDeck
+    deckImage={DECK_IMAGES.DESIGN_SYSTEM}
+    style={{ width: '64px', height: '64px', marginTop: '11px' }}
+  />
+>>>>>>> 8b127ebc61af0df53f39cab6d0cec92ec62dfd41
 </div>
 
 <Steps>
   <div>
-    <Button text="Click Me" href="./" />
+    <Button text='Click Me' href='./' />
   </div>
 </Steps>
 
@@ -178,10 +244,11 @@ const Button = ({ text, link, type }) => {
   );
 };
 
-export default Button
+export default Button;
 ```
 
 ```js
+
 ```
 
 </Step>
@@ -201,11 +268,11 @@ const Button = ({ text, link, type }) => {
   );
 };
 
-export default Button
+export default Button;
 ```
 
 ```js
- 
+
 ```
 
 </Step>
@@ -223,15 +290,15 @@ const Button = ({ text, link, type }) => {
       {text}
     </MuiButton>
   );
-}; 
+};
 
-export default Button 
+export default Button;
 ```
 
 ```js showNumbers
 // Button.builder.js
 import { Builder } from '@builder.io/react';
-import Button  from './Button';
+import Button from './Button';
 
 Builder.registerComponent(Button, {
   name: 'MyButton',
@@ -251,7 +318,7 @@ Builder.registerComponent(Button, {
       type: 'string',
       enum: ['outlined', 'text', 'contained'],
       defaultValue: 'contained',
-    }
+    },
   ],
 });
 ```
@@ -261,7 +328,7 @@ Builder.registerComponent(Button, {
 <Step>
 
 ```js showNumbers 5[16:38]
-// Button.js 
+// Button.js
 import React from 'react';
 import MuiButton from '@mui/material/Button';
 
@@ -271,46 +338,9 @@ const Button = ({ text, link, type }) => {
       {text}
     </MuiButton>
   );
-}; 
+};
 
-export default Button 
-```
-
-```js showNumbers 6,9,14,19
-// Button.builder.js
-import { Builder } from '@builder.io/react';
-import Button  from './Button';
-
-Builder.registerComponent(Button, {
-  name: 'MyButton',
-  inputs: [
-    {
-      name: 'text',
-      type: 'string',
-      defaultValue: 'Click me',
-    },
-    {
-      name: 'link',
-      type: 'url',
-      defaultValue: '/',
-    },
-    {
-      name: 'type',
-      type: 'string',
-      enum: ['outlined', 'text', 'contained'],
-      defaultValue: 'contained',
-    }
-  ],
-});
-```
-
-</Step>
-
-<Step>
-
-```js
-// app.js 
-import './Button.builder.js'
+export default Button;
 ```
 
 ```js showNumbers 6,9,14,19
@@ -321,7 +351,7 @@ import Button from './Button';
 Builder.registerComponent(Button, {
   name: 'MyButton',
   inputs: [
-    {  
+    {
       name: 'text',
       type: 'string',
       defaultValue: 'Click me',
@@ -336,7 +366,44 @@ Builder.registerComponent(Button, {
       type: 'string',
       enum: ['outlined', 'text', 'contained'],
       defaultValue: 'contained',
-    }
+    },
+  ],
+});
+```
+
+</Step>
+
+<Step>
+
+```js
+// app.js
+import './Button.builder.js';
+```
+
+```js showNumbers 6,9,14,19
+// Button.builder.js
+import { Builder } from '@builder.io/react';
+import Button from './Button';
+
+Builder.registerComponent(Button, {
+  name: 'MyButton',
+  inputs: [
+    {
+      name: 'text',
+      type: 'string',
+      defaultValue: 'Click me',
+    },
+    {
+      name: 'link',
+      type: 'url',
+      defaultValue: '/',
+    },
+    {
+      name: 'type',
+      type: 'string',
+      enum: ['outlined', 'text', 'contained'],
+      defaultValue: 'contained',
+    },
   ],
 });
 ```
@@ -347,13 +414,22 @@ Builder.registerComponent(Button, {
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.MUI_BUTTON} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.MUI_BUTTON}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 <Steps>
 
 <div>
-  <RandomlyPlaced top={29} left={39} style={{width: '20%', height: '20%'}}>
-    <ImageDeck deckImage={DECK_IMAGES.COMPONENTS_ONLY_MODE} width={'100%'} height={'100%'} />
+  <RandomlyPlaced top={29} left={39} style={{ width: '20%', height: '20%' }}>
+    <ImageDeck
+      deckImage={DECK_IMAGES.COMPONENTS_ONLY_MODE}
+      width={'100%'}
+      height={'100%'}
+    />
   </RandomlyPlaced>
 </div>
 
@@ -361,8 +437,8 @@ Builder.registerComponent(Button, {
 
 ---
 
-<div style={{width: '100vw', height: '100vh'}}>
-  <BuilderSlideSection/>
+<div style={{ width: '100vw', height: '100vh' }}>
+  <BuilderSlideSection />
 </div>
 
 ---
@@ -370,7 +446,11 @@ Builder.registerComponent(Button, {
 <CodeSurfer theme={vsDark}>
 
 ```js
-<Fireworks count={3} colors={['#cc3333', '#4CAF50', '#81C784']} interval={500} />
+<Fireworks
+  count={3}
+  colors={['#cc3333', '#4CAF50', '#81C784']}
+  interval={500}
+/>
 ```
 
 </CodeSurfer>
@@ -378,10 +458,11 @@ Builder.registerComponent(Button, {
 ---
 
 # Results
-<Gauge id="before" percent={92} style={{height: '250px'}} />
-<Gauge id="after" percent={61} style={{height: '250px'}} />
 
-- SEO Score is a lot higher 
+<Gauge id='before' percent={92} style={{ height: '250px' }} />
+<Gauge id='after' percent={61} style={{ height: '250px' }} />
+
+- SEO Score is a lot higher
 - Marketing team is happy because they don't have do wait for content to change, they change it themselves
 - Design team is happy since they don't have to wait for any pixel pushing
 - Product is happy because they can conduct their own A/B tests
@@ -397,5 +478,7 @@ Builder.registerComponent(Button, {
 ---
 
 # Thank you! Ending slide
+
 Enter Mixtiles Dev page link here, twitter, github, etc
-<BuilderSlideSection/>
+
+<BuilderSlideSection />
