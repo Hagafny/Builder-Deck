@@ -10,10 +10,10 @@ export const BuilderSlideSection = () => {
 
   useEffect(() => {
     builder
-      .get('test', { url: window.location.pathname })
+      .get('slide', { url: window.location.pathname })
       .promise()
       .then(setBuilderContentJson);
   }, []);
 
-  return <BuilderComponent model='test' content={builderContentJson} />;
+  return <BuilderComponent model='slide' content={builderContentJson} />;
 };

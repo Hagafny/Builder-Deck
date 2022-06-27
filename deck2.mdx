@@ -22,10 +22,6 @@ import myTheme from './theme/theme';
 
 export const theme = myTheme;
 
-<BuilderSlideSection  />
-
----
-
 # Code or No-Code: Why not both? 🤷‍♀️
 
 <Steps>
@@ -115,7 +111,7 @@ _With great traction, comes great responsibility_
 
 ## Code releases became the bottleneck of the business
 
-<ClosedBottleneck initialDelay={3000} interval={300} />
+<ClosedBottleneck initialDelay={1000} interval={300} />
 
 ---
 
@@ -541,6 +537,104 @@ Builder.registerComponent(Button, {
 - Product is happy because they can conduct their own A/B tests
 - And even operations are happy because I have more time for their demand
 - Finally, we're happy because we ship to production 5X faster and we offload our work to non technical teams
+
+---
+
+<CodeSurferColumns themes={[vsDark, myTheme]}>
+
+<Step>
+
+```js
+<SlideSection />
+```
+
+<BuilderSlideSection />
+
+
+</Step>
+
+<Step>
+
+```js showNumbers
+// SlideSction.js
+import React, { useState, useEffect } from 'react';
+import { BuilderComponent, builder } from '@builder.io/react';
+
+export const BuilderSlideSection = () => {
+  const [builderContentJson, setBuilderContentJson] = useState(null);
+
+  useEffect(() => {
+    builder
+      .get('slide', { url: window.location.pathname })
+      .then(setBuilderContentJson);
+  }, []);
+
+  return <BuilderComponent model='slide' content={builderContentJson} />;
+};
+
+```
+
+<BuilderSlideSection />
+
+</Step>
+
+<Step>
+
+```js showNumbers 8:12
+// SlideSction.js
+import React, { useState, useEffect } from 'react';
+import { BuilderComponent, builder } from '@builder.io/react';
+
+export const BuilderSlideSection = () => {
+  const [builderContentJson, setBuilderContentJson] = useState(null);
+
+  useEffect(() => {
+    builder
+      .get('slide', { url: window.location.pathname })
+      .then(setBuilderContentJson);
+  }, []);
+
+  return <BuilderComponent model='slide' content={builderContentJson} />;
+};
+
+```
+
+<BuilderSlideSection />
+
+</Step>
+
+<Step>
+
+```js showNumbers 14
+// SlideSction.js
+import React, { useState, useEffect } from 'react';
+import { BuilderComponent, builder } from '@builder.io/react';
+
+export const BuilderSlideSection = () => {
+  const [builderContentJson, setBuilderContentJson] = useState(null);
+
+  useEffect(() => {
+    builder
+      .get('slide', { url: window.location.pathname })
+      .then(setBuilderContentJson);
+  }, []);
+
+  return <BuilderComponent model='slide' content={builderContentJson} />;
+};
+
+```
+
+<BuilderSlideSection />
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# Summary
+
+<ClosedBottleneck />
 
 ---
 
