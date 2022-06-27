@@ -10,28 +10,30 @@ const DEPARTMENT_PROPS = {
   [DEPARTMENTS.MARKETING]: {
     department: DEPARTMENTS.MARKETING,
     color: DEPARTMENTS_COLORS[DEPARTMENTS.MARKETING],
-    top: '14%',
-    leftStart: '14%',
+    topStart: '20%',
+    leftStart: '19%',
   },
   [DEPARTMENTS.DESIGN]: {
     department: DEPARTMENTS.DESIGN,
     color: DEPARTMENTS_COLORS[DEPARTMENTS.DESIGN],
-    top: '32%',
-    leftStart: '10%',
+    topStart: '37%',
+    leftStart: '15%',
   },
   [DEPARTMENTS.PRODUCT]: {
     department: DEPARTMENTS.PRODUCT,
     color: DEPARTMENTS_COLORS[DEPARTMENTS.PRODUCT],
-    top: '52%',
-    leftStart: '11%',
+    topStart: '54%',
+    leftStart: '16%',
   },
   [DEPARTMENTS.OPERATIONS]: {
     department: DEPARTMENTS.OPERATIONS,
     color: DEPARTMENTS_COLORS[DEPARTMENTS.OPERATIONS],
-    top: '69%',
-    leftStart: '16%',
+    topStart: '71%',
+    leftStart: '21%',
   },
 };
+
+
 
 function randBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -50,9 +52,9 @@ export const OpenBottleneck = () => {
   const [balls, setBalls] = useState([]);
   const springs = useSprings(
     balls.length,
-    balls.map(({ top, leftStart, leftEnd, delay }) => {
+    balls.map(({ topStart, leftStart, leftEnd, delay }) => {
       return {
-        from: { top, left: leftStart, opacity: 10 },
+        from: { top: topStart, left: leftStart, opacity: 10 },
         to: { left: leftEnd, opacity: 0 },
         config: {
           duration: 1500,
@@ -81,7 +83,7 @@ export const OpenBottleneck = () => {
         return (
           <AnimatedCircle
             key={i}
-            size={24}
+            size={18}
             color={balls[i].color}
             springProps={values}
           />

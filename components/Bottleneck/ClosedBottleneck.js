@@ -6,21 +6,25 @@ import { DEPARTMENTS, DEPARTMENTS_COLORS } from '../../consts/departments';
 
 const DEPARTMENT_PROPS = {
   [DEPARTMENTS.MARKETING]: {
+    department: DEPARTMENTS.MARKETING,
     color: DEPARTMENTS_COLORS[DEPARTMENTS.MARKETING],
     topStart: '20%',
     leftStart: '19%',
   },
   [DEPARTMENTS.DESIGN]: {
+    department: DEPARTMENTS.DESIGN,
     color: DEPARTMENTS_COLORS[DEPARTMENTS.DESIGN],
     topStart: '37%',
     leftStart: '15%',
   },
   [DEPARTMENTS.PRODUCT]: {
+    department: DEPARTMENTS.PRODUCT,
     color: DEPARTMENTS_COLORS[DEPARTMENTS.PRODUCT],
     topStart: '54%',
     leftStart: '16%',
   },
   [DEPARTMENTS.OPERATIONS]: {
+    department: DEPARTMENTS.OPERATIONS,
     color: DEPARTMENTS_COLORS[DEPARTMENTS.OPERATIONS],
     topStart: '71%',
     leftStart: '21%',
