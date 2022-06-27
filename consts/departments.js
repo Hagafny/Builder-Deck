@@ -13,5 +13,3 @@ export const DEPARTMENTS_COLORS = {
   [DEPARTMENTS.PRODUCT]: theme.colors.green2,
   [DEPARTMENTS.OPERATIONS]: theme.colors.green,
 };
-
-console.log('DEPARTMENTS_COLORS', DEPARTMENTS_COLORS);

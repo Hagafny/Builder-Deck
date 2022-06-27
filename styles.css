@@ -10,3 +10,29 @@ ul li::before {
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
+
+.bubble {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  width: 300px;
+  background: #fff;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  color: #000;
+}
+
+.bubble-bottom-left:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #fff;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #fff;
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
+}
