@@ -1,39 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatedCircle } from './AnimatedCircle';
 import { useSprings, easings } from 'react-spring';
-import { BaseBottleneck, BOTTLENECK_MODE } from './BaseBottleneck';
-import { DEPARTMENTS, DEPARTMENTS_COLORS } from '../../consts/departments';
+import { BaseBottleneck, BOTTLENECK_MODE, DEPARTMENT_PROPS } from './BaseBottleneck';
+import { DEPARTMENTS } from '../../consts/departments';
 
 const initialDelay = 200;
-
-const DEPARTMENT_PROPS = {
-  [DEPARTMENTS.MARKETING]: {
-    department: DEPARTMENTS.MARKETING,
-    color: DEPARTMENTS_COLORS[DEPARTMENTS.MARKETING],
-    topStart: '20%',
-    leftStart: '19%',
-  },
-  [DEPARTMENTS.DESIGN]: {
-    department: DEPARTMENTS.DESIGN,
-    color: DEPARTMENTS_COLORS[DEPARTMENTS.DESIGN],
-    topStart: '37%',
-    leftStart: '15%',
-  },
-  [DEPARTMENTS.PRODUCT]: {
-    department: DEPARTMENTS.PRODUCT,
-    color: DEPARTMENTS_COLORS[DEPARTMENTS.PRODUCT],
-    topStart: '54%',
-    leftStart: '16%',
-  },
-  [DEPARTMENTS.OPERATIONS]: {
-    department: DEPARTMENTS.OPERATIONS,
-    color: DEPARTMENTS_COLORS[DEPARTMENTS.OPERATIONS],
-    topStart: '71%',
-    leftStart: '21%',
-  },
-};
-
-
 
 function randBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
