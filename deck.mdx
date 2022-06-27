@@ -6,25 +6,20 @@ import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSli
 import { Button } from './components/Button/Button.js';
 import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js';
 import { OpenBottleneck } from './components/Bottleneck/OpenBottleneck.js';
-
 import { RandomlyPlaced } from './layouts/RandomlyPlaced.js';
 import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js';
 import { FadeIn } from './components/FadeIn.js';
-import { Gauge } from './components/Gauge/Gauge.js';
 import { IntroGrid } from './layouts/IntroGrid.js';
 import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
 import { KawaiiWrapper } from './components/KawaiiWrapper/KawaiiWrapper.js';
 import './components/KawaiiWrapper/KawaiiWrapper.builder.js';
 import { SideBySide } from './layouts/SideBySide.js';
-import { DevDependenciesSlide } from './slides/DevDependencies.js';
-
+import { ThankYouSlide } from './slides/ThankYouSlide.js';
 import myTheme from './theme/theme';
+import { MigrationResultsSlide } from './slides/MigrationResultsSlide.js';
+import { SlideLayout } from './layouts/SlideLayout.js'
 
 export const theme = myTheme;
-
-<BuilderSlideSection  />
-
----
 
 # Code or No-Code: Why not both? 🤷‍♀️
 
@@ -41,7 +36,7 @@ export const theme = myTheme;
 <IntroGrid>
   <div style={{gridRow:'1/2', gridColumn:'1/3', width: '100%', height: '100%'}}>
   <ImageDeck deckImage={DECK_IMAGES.RON} /> 
-  <div style={{textAlign: 'center'}}>Ron Hagafny</div>`
+  <div style={{textAlign: 'center', fontSize: '46px'}}>Ron Hagafny</div>`
   </div>
 
   <Steps>
@@ -91,7 +86,7 @@ export const theme = myTheme;
 
 ---
 
-_With great traction, comes great responsibility_
+<em style={{fontSize: '1.5em'}}>With great traction, comes great responsibility</em>
 
 ---
 
@@ -113,15 +108,13 @@ _With great traction, comes great responsibility_
 
 ---
 
-## Code releases became the bottleneck of the business
-
-<ClosedBottleneck initialDelay={3000} interval={300} />
+<SlideLayout title='Code releases became the bottleneck of the business'>
+  <ClosedBottleneck initialDelay={1000} interval={300} />
+</SlideLayout>
 
 ---
 
-<div style={{ width: '20%', height: '20%' }}>
-  <ImageDeck deckImage={DECK_IMAGES.BUILDER} />
-</div>
+<h1><ImageDeck deckImage={DECK_IMAGES.BUILDER} style={{ width: '256px', height: '256px' }}/></h1>
 
 <ImageDeck deckImage={DECK_IMAGES.BUILDER_1} width={'50%'} height={'50%'} />
 
@@ -136,6 +129,9 @@ _With great traction, comes great responsibility_
 
 ---
 
+<h1>
+  <ImageDeck deckImage={DECK_IMAGES.NEXT_JS} style={{ width: '256px', height: '256px' }} />
+</h1>
 <div
   style={{
     width: '100vh',
@@ -146,14 +142,8 @@ _With great traction, comes great responsibility_
   }}
 >
   <ZoomSteps>
-    <ImageDeck
-      deckImage={DECK_IMAGES.ROCKET}
-      style={{ width: '128px', height: '128px' }}
-    />
-    <ImageDeck
-      deckImage={DECK_IMAGES.SEO}
-      style={{ width: '128px', height: '128px' }}
-    />
+    <ImageDeck deckImage={DECK_IMAGES.ROCKET} style={{ width: '256px', height: '256px' }}/>
+    <ImageDeck deckImage={DECK_IMAGES.SEO} style={{ width: '256px', height: '256px' }}/> 
   </ZoomSteps>
 </div>
 
@@ -193,7 +183,7 @@ const FaqPage = ({ data }) => {
 
 export async function getStaticProps() {
   // Get data from external API
-  const data = await getFaqData()
+  const data = await getFaqData();
 
   return {
     props: {
@@ -210,20 +200,20 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   // Get data from external API
-  const data = await getFaqData()
+  const data = await getFaqData();
 
   return {
     props: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
-````
+```
 
 ```js 10:22
 const FaqPage = ({ data }) => {
@@ -232,23 +222,23 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   const faqPageContent = await builder.get('page', {
     userAttributes: {
-      urlPath: '/faq'
-    }
-  })
+      urlPath: '/faq',
+    },
+  });
 
   return {
     props: {
-      faqPageContent
-    }
-  }
+      faqPageContent,
+    },
+  };
 }
-````
+```
 
 ```js 1:8
 const FaqPage = ({ data }) => {
@@ -257,23 +247,23 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   const faqPageContent = await builder.get('page', {
     userAttributes: {
-      urlPath: '/faq'
-    }
-  })
+      urlPath: '/faq',
+    },
+  });
 
   return {
     props: {
-      faqPageContent
-    }
-  }
+      faqPageContent,
+    },
+  };
 }
-````
+```
 
 ```js 1:5
 const FaqPage = ({ faqPageContent }) => {
@@ -295,46 +285,49 @@ export async function getStaticProps() {
     }
   }
 }
-````
+```
 
 </CodeSurfer>
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_1} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ_END_1}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_2} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ_END_2}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_3} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ_END_3}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
-<div
-  style={{
-    display: 'flex',
-    justifyContent: 'center',
-    alinItems: 'center',
-    marginBottom: '30px',
-  }}
->
-  <h1 style={{ marginTop: 0, marginBottom: 0, marginLeft: 0 }}>
-    Design System
-  </h1>
-  <ImageDeck
-    deckImage={DECK_IMAGES.DESIGN_SYSTEM}
-    style={{ width: '64px', height: '64px', marginTop: '11px' }}
-  />
-</div>
+ <SlideLayout title='Building a Design System'>
 
 <Steps>
-  <div>
+  <div style={{width: '100%', height:'100%'}}>
     <Button text='Click Me' href='./' />
   </div>
 </Steps>
+
+</SlideLayout>
+
 
 ---
 
@@ -423,7 +416,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    }
+    },
   ],
 });
 ```
@@ -465,7 +458,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    }
+    },
   ],
 });
 ```
@@ -496,7 +489,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    }
+    },
   ],
 });
 ```
@@ -530,11 +523,12 @@ Builder.registerComponent(Button, {
 
 ---
 
-# Results
+# Migration Results
 
-<Gauge id='before' percent={92} style={{ height: '250px' }} />
-<Gauge id='after' percent={61} style={{ height: '250px' }} />
+<MigrationResultsSlide />
 
+<Notes>
+  
 - SEO Score is a lot higher
 - Marketing team is happy because they don't have do wait for content to change, they change it themselves
 - Design team is happy since they don't have to wait for any pixel pushing
@@ -542,16 +536,125 @@ Builder.registerComponent(Button, {
 - And even operations are happy because I have more time for their demand
 - Finally, we're happy because we ship to production 5X faster and we offload our work to non technical teams
 
----
-
-# Summary
-
-<OpenBottleneck />
+</Notes>
 
 ---
 
-# Thank you! Ending slide
+<CodeSurferColumns themes={[vsDark, myTheme]}>
 
-Enter Mixtiles Dev page link here, twitter, github, etc
+<Step>
+
+```js
+<SlideSection />
+```
 
 <BuilderSlideSection />
+
+</Step>
+
+<Step>
+
+```js showNumbers
+// SlideSction.js
+import React, { useState, useEffect } from 'react';
+import { BuilderComponent, builder } from '@builder.io/react';
+
+export const BuilderSlideSection = () => {
+  const [builderContentJson, setBuilderContentJson] = useState(null);
+
+  useEffect(() => {
+    builder
+      .get('slide', { url: window.location.pathname })
+      .then(setBuilderContentJson);
+  }, []);
+
+  return <BuilderComponent model='slide' content={builderContentJson} />;
+};
+```
+
+<BuilderSlideSection />
+
+</Step>
+
+<Step>
+
+```js showNumbers 8:12
+// SlideSction.js
+import React, { useState, useEffect } from 'react';
+import { BuilderComponent, builder } from '@builder.io/react';
+
+export const BuilderSlideSection = () => {
+  const [builderContentJson, setBuilderContentJson] = useState(null);
+
+  useEffect(() => {
+    builder
+      .get('slide', { url: window.location.pathname })
+      .then(setBuilderContentJson);
+  }, []);
+
+  return <BuilderComponent model='slide' content={builderContentJson} />;
+};
+```
+
+<BuilderSlideSection />
+
+</Step>
+
+<Step>
+
+```js showNumbers 14
+// SlideSction.js
+import React, { useState, useEffect } from 'react';
+import { BuilderComponent, builder } from '@builder.io/react';
+
+export const BuilderSlideSection = () => {
+  const [builderContentJson, setBuilderContentJson] = useState(null);
+
+  useEffect(() => {
+    builder
+      .get('slide', { url: window.location.pathname })
+      .then(setBuilderContentJson);
+  }, []);
+
+  return <BuilderComponent model='slide' content={builderContentJson} />;
+};
+```
+
+<BuilderSlideSection />
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<div
+  style={{
+    width: '100vh',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  }}
+>
+  <ZoomSteps>
+    <ImageDeck deckImage={DECK_IMAGES.NEXT_JS} style={{ width: '256px', height: '256px' }}/>
+    <ImageDeck deckImage={DECK_IMAGES.BUILDER} style={{ width: '256px', height: '256px' }}/> 
+  </ZoomSteps>
+</div>
+
+---
+
+<SlideLayout title='Start moving from here'>
+  <ClosedBottleneck initialDelay={0} interval={100} />
+</SlideLayout>
+
+---
+
+<SlideLayout title='To here'>
+  <OpenBottleneck initialDelay={1000} interval={300} />
+</SlideLayout>
+
+---
+
+<ThankYouSlide />
