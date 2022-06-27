@@ -1,0 +1,557 @@
+import './styles.css';
+import { Steps, Notes } from 'mdx-deck';
+import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
+import { vsDark, nightOwl } from '@code-surfer/themes';
+import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js';
+import { Button } from './components/Button/Button.js';
+import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js';
+import { OpenBottleneck } from './components/Bottleneck/OpenBottleneck.js';
+
+import { RandomlyPlaced } from './layouts/RandomlyPlaced.js';
+import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js';
+import { FadeIn } from './components/FadeIn.js';
+import { Gauge } from './components/Gauge/Gauge.js';
+import { IntroGrid } from './layouts/IntroGrid.js';
+import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
+import { KawaiiWrapper } from './components/KawaiiWrapper/KawaiiWrapper.js';
+import './components/KawaiiWrapper/KawaiiWrapper.builder.js';
+import { SideBySide } from './layouts/SideBySide.js';
+import { DevDependenciesSlide } from './slides/DevDependencies.js';
+
+import myTheme from './theme/theme';
+
+export const theme = myTheme;
+
+<BuilderSlideSection  />
+
+---
+
+# Code or No-Code: Why not both? 🤷‍♀️
+
+<Steps>
+
+## Building a hybrid infrastructure using Next.js & Builder.io to free up your time
+
+</Steps>
+
+---
+
+# Hello 👋
+
+<IntroGrid>
+  <div style={{gridRow:'1/2', gridColumn:'1/3', width: '100%', height: '100%'}}>
+  <ImageDeck deckImage={DECK_IMAGES.RON} /> 
+  <div style={{textAlign: 'center'}}>Ron Hagafny</div>`
+  </div>
+
+  <Steps>
+
+<ImageDeck
+  width={'50%'}
+  height={'50%'}
+  deckImage={DECK_IMAGES.MIXTILES}
+  style={{ gridRow: '2/3', gridColumn: '1/2' }}
+/>
+<ImageDeck
+  width={'50%'}
+  height={'50%'}
+  deckImage={DECK_IMAGES.EASYPLANT}
+  style={{ gridRow: '1/2', gridColumn: '2/3' }}
+/>
+
+  </Steps>
+</IntroGrid>
+
+---
+
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.HOMEPAGE}
+  styles={{ backgroundSize: 'cover' }}
+/>
+
+---
+
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.COLLECTIONS}
+  styles={{ backgroundSize: 'cover' }}
+/>
+
+---
+
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ}
+  styles={{ backgroundSize: 'cover' }}
+/>
+
+---
+
+_With great traction, comes great responsibility_
+
+---
+
+<ImageDeck
+  width={'90%'}
+  height={'90%'}
+  deckImage={DECK_IMAGES.DEV_DEPENDNECIES}
+/>
+
+<Notes>
+
+- Marketing team wants to change content of the pages
+- Design team wants to try different layouts, and as the developers we need to do some pixel pushing here and there
+- Product would like to run A/B tests because maybe instead of 10% discount, we show, a 50$ discont , that can convert more people
+- Finally Operations, they need their internal tools to help their prodactivity
+- And here we sit , the developers, caught in the middle
+
+</Notes>
+
+---
+
+## Code releases became the bottleneck of the business
+
+<ClosedBottleneck initialDelay={3000} interval={300} />
+
+---
+
+<div style={{ width: '20%', height: '20%' }}>
+  <ImageDeck deckImage={DECK_IMAGES.BUILDER} />
+</div>
+
+<ImageDeck deckImage={DECK_IMAGES.BUILDER_1} width={'50%'} height={'50%'} />
+
+---
+
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.BUILDER_2}
+  styles={{ backgroundSize: 'cover' }}
+/>
+
+---
+
+<div
+  style={{
+    width: '100vh',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  }}
+>
+  <ZoomSteps>
+    <ImageDeck
+      deckImage={DECK_IMAGES.ROCKET}
+      style={{ width: '128px', height: '128px' }}
+    />
+    <ImageDeck
+      deckImage={DECK_IMAGES.SEO}
+      style={{ width: '128px', height: '128px' }}
+    />
+  </ZoomSteps>
+</div>
+
+---
+
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ}
+  styles={{ backgroundSize: 'cover' }}
+/>
+
+---
+
+<CodeSurfer theme={vsDark}>
+
+```js showNumbers
+const FaqPage = ({ data }) => {
+  return (
+    <>
+      <h1>FAQ</h1>
+      <FaqList data={data} />
+    </>
+  );
+};
+```
+
+```js 10:19
+const FaqPage = ({ data }) => {
+  return (
+    <>
+      <h1>FAQ</h1>
+      <FaqList data={data} />
+    </>
+  );
+};
+
+export async function getStaticProps() {
+  // Get data from external API
+  const data = await getFaqData()
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+```
+
+```js 1[16:26],12:17
+const FaqPage = ({ data }) => {
+  return (
+    <>
+      <h1>FAQ</h1>
+      <FaqList data={data} />
+    </>
+  )
+}
+
+export async function getStaticProps() {
+  // Get data from external API
+  const data = await getFaqData()
+
+  return {
+    props: {
+      data
+    }
+  }
+}
+````
+
+```js 10:22
+const FaqPage = ({ data }) => {
+  return (
+    <>
+      <h1>FAQ</h1>
+      <FaqList data={data} />
+    </>
+  )
+}
+
+export async function getStaticProps() {
+  const faqPageContent = await builder.get('page', {
+    userAttributes: {
+      urlPath: '/faq'
+    }
+  })
+
+  return {
+    props: {
+      faqPageContent
+    }
+  }
+}
+````
+
+```js 1:8
+const FaqPage = ({ data }) => {
+  return (
+    <>
+      <h1>FAQ</h1>
+      <FaqList data={data} />
+    </>
+  )
+}
+
+export async function getStaticProps() {
+  const faqPageContent = await builder.get('page', {
+    userAttributes: {
+      urlPath: '/faq'
+    }
+  })
+
+  return {
+    props: {
+      faqPageContent
+    }
+  }
+}
+````
+
+```js 1:5
+const FaqPage = ({ faqPageContent }) => {
+  return (
+    <BuilderComponent mode="page" content={faqPageContent}>
+  )
+}
+
+export async function getStaticProps() {
+  const pageContent = await builder.get('page', {
+    userAttributes: {
+      urlPath: '/faq'
+    }
+  })
+
+  return {
+    props: {
+      pageContent
+    }
+  }
+}
+````
+
+</CodeSurfer>
+
+---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_1} styles={{backgroundSize: 'cover'}} />
+
+---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_2} styles={{backgroundSize: 'cover'}} />
+
+---
+
+<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_3} styles={{backgroundSize: 'cover'}} />
+
+---
+
+<div
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alinItems: 'center',
+    marginBottom: '30px',
+  }}
+>
+  <h1 style={{ marginTop: 0, marginBottom: 0, marginLeft: 0 }}>
+    Design System
+  </h1>
+  <ImageDeck
+    deckImage={DECK_IMAGES.DESIGN_SYSTEM}
+    style={{ width: '64px', height: '64px', marginTop: '11px' }}
+  />
+</div>
+
+<Steps>
+  <div>
+    <Button text='Click Me' href='./' />
+  </div>
+</Steps>
+
+---
+
+<CodeSurferColumns themes={[vsDark, myTheme]}>
+
+<Step>
+
+```js showNumbers
+// Button.js
+import React from 'react';
+import MuiButton from '@mui/material/Button';
+
+const Button = ({ text, link }) => {
+  return (
+    <MuiButton text={text} href={link}>
+      {text}
+    </MuiButton>
+  );
+};
+
+export default Button;
+```
+
+```js
+
+```
+
+</Step>
+
+<Step>
+
+```js showNumbers 5[16:31]
+// Button.js
+import React from 'react';
+import MuiButton from '@mui/material/Button';
+
+const Button = ({ text, link }) => {
+  return (
+    <MuiButton text={text} href={link}>
+      {text}
+    </MuiButton>
+  );
+};
+
+export default Button;
+```
+
+```js
+ 
+```
+
+</Step>
+
+<Step>
+
+```js showNumbers 5[16:31]
+// Button.js
+import React from 'react';
+import MuiButton from '@mui/material/Button';
+
+const Button = ({ text, link }) => {
+  return (
+    <MuiButton text={text} href={link}>
+      {text}
+    </MuiButton>
+  );
+};
+
+export default Button;
+```
+
+```js showNumbers
+// Button.builder.js
+import { Builder } from '@builder.io/react';
+import Button from './Button';
+
+Builder.registerComponent(Button, {
+  name: 'MyButton',
+  inputs: [
+    {
+      name: 'text',
+      type: 'string',
+      defaultValue: 'Click me',
+    },
+    {
+      name: 'link',
+      type: 'url',
+      defaultValue: '/',
+    }
+  ],
+});
+```
+
+</Step>
+
+<Step>
+
+```js showNumbers 5[16:31]
+// Button.js
+import React from 'react';
+import MuiButton from '@mui/material/Button';
+
+const Button = ({ text, link }) => {
+  return (
+    <MuiButton text={text} href={link}>
+      {text}
+    </MuiButton>
+  );
+};
+
+export default Button;
+```
+
+```js showNumbers 6,9,14,19
+// Button.builder.js
+import { Builder } from '@builder.io/react';
+import Button from './Button';
+
+Builder.registerComponent(Button, {
+  name: 'MyButton',
+  inputs: [
+    {
+      name: 'text',
+      type: 'string',
+      defaultValue: 'Click me',
+    },
+    {
+      name: 'link',
+      type: 'url',
+      defaultValue: '/',
+    }
+  ],
+});
+```
+
+</Step>
+
+<Step>
+
+```js
+// app.js
+import './Button.builder.js';
+```
+
+```js showNumbers 6,9,14,19
+// Button.builder.js
+import { Builder } from '@builder.io/react';
+import Button from './Button';
+
+Builder.registerComponent(Button, {
+  name: 'MyButton',
+  inputs: [
+    {
+      name: 'text',
+      type: 'string',
+      defaultValue: 'Click me',
+    },
+    {
+      name: 'link',
+      type: 'url',
+      defaultValue: '/',
+    }
+  ],
+});
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.MUI_BUTTON}
+  styles={{ backgroundSize: 'cover' }}
+/>
+
+<Steps>
+
+<div>
+  <RandomlyPlaced top={29} left={39} style={{ width: '20%', height: '20%' }}>
+    <ImageDeck
+      deckImage={DECK_IMAGES.COMPONENTS_ONLY_MODE}
+      width={'100%'}
+      height={'100%'}
+    />
+  </RandomlyPlaced>
+</div>
+
+</Steps>
+
+---
+
+# Results
+
+<Gauge id='before' percent={92} style={{ height: '250px' }} />
+<Gauge id='after' percent={61} style={{ height: '250px' }} />
+
+- SEO Score is a lot higher
+- Marketing team is happy because they don't have do wait for content to change, they change it themselves
+- Design team is happy since they don't have to wait for any pixel pushing
+- Product is happy because they can conduct their own A/B tests
+- And even operations are happy because I have more time for their demand
+- Finally, we're happy because we ship to production 5X faster and we offload our work to non technical teams
+
+---
+
+# Summary
+
+<OpenBottleneck />
+
+---
+
+# Thank you! Ending slide
+
+Enter Mixtiles Dev page link here, twitter, github, etc
+
+<BuilderSlideSection />
