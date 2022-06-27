@@ -7,23 +7,23 @@ import { DEPARTMENTS, DEPARTMENTS_COLORS } from '../../consts/departments';
 const DEPARTMENT_PROPS = {
   [DEPARTMENTS.MARKETING]: {
     color: DEPARTMENTS_COLORS[DEPARTMENTS.MARKETING],
-    topStart: '14%',
-    leftStart: '14%',
+    topStart: '20%',
+    leftStart: '19%',
   },
   [DEPARTMENTS.DESIGN]: {
     color: DEPARTMENTS_COLORS[DEPARTMENTS.DESIGN],
-    topStart: '32%',
-    leftStart: '10%',
+    topStart: '37%',
+    leftStart: '15%',
   },
   [DEPARTMENTS.PRODUCT]: {
     color: DEPARTMENTS_COLORS[DEPARTMENTS.PRODUCT],
-    topStart: '52%',
-    leftStart: '11%',
+    topStart: '54%',
+    leftStart: '16%',
   },
   [DEPARTMENTS.OPERATIONS]: {
     color: DEPARTMENTS_COLORS[DEPARTMENTS.OPERATIONS],
-    topStart: '69%',
-    leftStart: '16%',
+    topStart: '71%',
+    leftStart: '21%',
   },
 };
 
@@ -76,7 +76,7 @@ export const ClosedBottleneck = ({ initialDelay = 200, interval = 300 }) => {
       {springs.map((springStyle, i) => (
         <AnimatedCircle
           key={i}
-          size={24}
+          size={18}
           color={animations[i].color}
           springProps={springStyle}
         />

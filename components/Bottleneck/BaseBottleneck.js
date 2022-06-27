@@ -32,14 +32,14 @@ const DepartmentTitles = () => (
       display: 'flex',
       flexDirection: 'column',
       position: 'absolute',
-      top: '25%',
+      top: '16%',
       left: '5%',
     }}
   >
     {Object.entries(DEPARTMENTS_COLORS).map(([name, color]) => (
       <div
         key={name}
-        style={{ color: color, fontSize: '24px', marginBottom: '10px' }}
+        style={{ color: color, fontSize: '20px', marginBottom: '10px' }}
       >
         {name}
       </div>
