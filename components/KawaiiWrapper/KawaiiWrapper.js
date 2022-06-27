@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { IceCream, Chocolate, Planet } from 'react-kawaii';
 
 export const KawaiiWrapper = ({
@@ -7,6 +7,9 @@ export const KawaiiWrapper = ({
   color = '#fc105c',
   size = 800,
 }) => {
+  useEffect(() => {
+    localStorage.setItem('character-value', character);
+  }, [character]);
   let Kawaii;
 
   switch (character) {

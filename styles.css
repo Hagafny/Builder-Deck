@@ -12,14 +12,14 @@ ul li::before {
 }
 
 .bubble {
-  position: relative;
+  position: absolute;
   font-family: sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  width: 300px;
-  background: #fff;
+  font-size: 48px;
+  line-height: 74px;
+  width: 440px;
+  background: #f8ddea;
   border-radius: 40px;
-  padding: 24px;
+  padding: 20px;
   text-align: center;
   color: #000;
 }
@@ -29,9 +29,9 @@ ul li::before {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 24px solid #fff;
+  border-left: 24px solid #f8ddea;
   border-right: 12px solid transparent;
-  border-top: 12px solid #fff;
+  border-top: 12px solid #f8ddea;
   border-bottom: 20px solid transparent;
   left: 32px;
   bottom: -24px;
