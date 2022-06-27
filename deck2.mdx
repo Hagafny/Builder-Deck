@@ -10,7 +10,6 @@ import { OpenBottleneck } from './components/Bottleneck/OpenBottleneck.js';
 import { RandomlyPlaced } from './layouts/RandomlyPlaced.js';
 import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js';
 import { FadeIn } from './components/FadeIn.js';
-import { Gauge } from './components/Gauge/Gauge.js';
 import { IntroGrid } from './layouts/IntroGrid.js';
 import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
 import { KawaiiWrapper } from './components/KawaiiWrapper/KawaiiWrapper.js';
@@ -528,15 +527,16 @@ Builder.registerComponent(Button, {
 
 # Results
 
-<Gauge id='before' percent={92} style={{ height: '250px' }} />
-<Gauge id='after' percent={61} style={{ height: '250px' }} />
-
+<Notes>
+  
 - SEO Score is a lot higher
 - Marketing team is happy because they don't have do wait for content to change, they change it themselves
 - Design team is happy since they don't have to wait for any pixel pushing
 - Product is happy because they can conduct their own A/B tests
 - And even operations are happy because I have more time for their demand
 - Finally, we're happy because we ship to production 5X faster and we offload our work to non technical teams
+
+</Notes>
 
 ---
 
