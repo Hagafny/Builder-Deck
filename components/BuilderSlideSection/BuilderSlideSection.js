@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BuilderComponent, builder } from '@builder.io/react'
+
 import config from '../../config'
 
 builder.init(config.BUILDER_API_KEY)

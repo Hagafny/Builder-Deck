@@ -3,10 +3,10 @@ import { Steps, Notes } from 'mdx-deck'
 import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
 import { vsDark, nightOwl } from '@code-surfer/themes';
 import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
-import { Fireworks } from './components/Fireworks/Fireworks.js'
 import { Button } from './components/Button/Button.js'
 import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js'
 import { OpenBottleneck } from './components/Bottleneck/OpenBottleneck.js'
+
 import { RandomlyPlaced } from './layouts/RandomlyPlaced.js'
 import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js'
 import { FadeIn } from './components/FadeIn.js'
@@ -15,7 +15,6 @@ import { IntroGrid } from './layouts/IntroGrid.js'
 import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js'
 import { SideBySide } from './layouts/SideBySide.js'
 import { DevDependenciesSlide } from './slides/DevDependencies.js'
-import './components/Fireworks/Fireworks.builder.js'
 
 import myTheme from './theme/theme'
 
@@ -31,14 +30,13 @@ export const theme = myTheme
 
 ---
 
-# We can ship code 5X faster 🚀
-
----
-
 # Hello 👋
 
 <IntroGrid>
-  <ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.RON} style={{gridRow:'1/2', gridColumn:'1/3'}} /> 
+  <div style={{gridRow:'1/2', gridColumn:'1/3', width: '100%', height: '100%'}}>
+  <ImageDeck deckImage={DECK_IMAGES.RON} /> 
+  <div style={{textAlign: 'center'}}>Ron Hagafny</div>`
+  </div>
 
   <Steps>
 
@@ -47,23 +45,6 @@ export const theme = myTheme
 
   </Steps>
 </IntroGrid>
-
----
-
-# What is the plan today
-
-<Steps>
-
-- Moving from our current stack to Next.js and Builder.io
-- What is Builder.io?
-- Next.js 101
-- How to combine both to create a infrastructure that can save you time 
-
-</Steps>
-
-<Notes>
-  Even today!
-</Notes>
 
 ---
 
@@ -79,7 +60,7 @@ export const theme = myTheme
 
 ---
 
-# With great traction, comes great responsibility
+*With great traction, comes great responsibility*
 
 ---
 
@@ -112,6 +93,15 @@ export const theme = myTheme
 ---
 
 <ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.BUILDER_2} styles={{backgroundSize: 'cover'}} />
+
+---
+
+<div style={{ width: '100vh', height: '100vh', display: 'flex', alignItems:'center', justifyContent: 'space-between'}}>
+<ZoomSteps>
+  <ImageDeck deckImage={DECK_IMAGES.ROCKET} style={{ width: '128px', height: '128px' }} />
+  <ImageDeck deckImage={DECK_IMAGES.SEO} style={{ width: '128px', height: '128px' }} />
+</ZoomSteps>
+</div>
 
 ---
 
@@ -339,7 +329,7 @@ Builder.registerComponent(Button, {
 
 ```js
 <Fireworks count={3} colors={['#cc3333', '#4CAF50', '#81C784']} interval={500} />
-``` 
+```
 
 </CodeSurfer>
 
@@ -360,16 +350,7 @@ Builder.registerComponent(Button, {
 
 # Summary
 
-<Steps>
-
-<div>
-<ClosedBottleneck />
-</div>
-<div>
 <OpenBottleneck />
-</div>
-
-</Steps>
 
 ---
 

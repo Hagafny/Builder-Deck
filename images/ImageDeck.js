@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image } from 'mdx-deck'
+
 import ron from '../images/ron.png'
 import bottle from '../images/bottle.png'
 import devDep from '../images/depDependencies.jpeg' 
@@ -13,13 +14,14 @@ import muiButton from '../images/muiButton.png'
 import componentsOnlyMode from '../images/com.png'
 import builder from '../images/builder.png'
 import nextJS from '../images/nextjs.png'
-
 import marketingCorner from '../images/marketingCorner.png'
 import designCorner from '../images/designCorner.png'
 import productCorner from '../images/productCorner.png'
 import operationsCorner from '../images/operationsCorner.png'
 import builder1 from '../images/builder1.png'
 import builder2 from '../images/builder2.png'
+import seo from '../images/seo.png'
+import rocket from '../images/rocket.png'
 
 export const DECK_IMAGES = {
     RON: 'ron.png',
@@ -40,8 +42,9 @@ export const DECK_IMAGES = {
     PRODUCT_CORNER: 'productCorner.png',
     OPERATIONS_CORNER: 'operationsCorner.png',
     BUILDER_1: 'builder1.png',
-    BUILDER_2: 'builder2.png'
-
+    BUILDER_2: 'builder2.png',
+    ROCKET: 'rocket.png',
+    SEO: 'seo.png'
 }
 
 const IMAGES = {
@@ -64,6 +67,8 @@ const IMAGES = {
     [DECK_IMAGES.OPERATIONS_CORNER]: operationsCorner,
     [DECK_IMAGES.BUILDER_1]: builder1,
     [DECK_IMAGES.BUILDER_2]: builder2,
+    [DECK_IMAGES.ROCKET]: rocket,
+    [DECK_IMAGES.SEO]: seo,
 }
 
 export const ImageDeck = ({ deckImage, width, height, style = {} }) => {

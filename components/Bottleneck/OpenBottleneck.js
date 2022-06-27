@@ -5,7 +5,6 @@ import { BaseBottleneck, BOTTLENECK_MODE } from './BaseBottleneck'
 import { DEPARTMENTS, DEPARTMENTS_COLORS } from '../../consts/departments'
 
 const initialDelay = 200
-const interval = 300
 
 const DEPARTMENT_PROPS = {
   [DEPARTMENTS.MARKETING]: {
@@ -32,26 +31,6 @@ const DEPARTMENT_PROPS = {
     top: '69%',
     leftStart: '16%'
   }
-}
-
-const circleAnimations = () => {
-  return [
-    { ...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '14%', leftEnd: '100%' },
-    { ...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '32%', leftEnd: '100%' },
-    { ...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '52%', leftEnd: '100%' },
-    { ...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '69%', leftEnd: '100%' },
-
-    // {...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '43%', leftEnd: '100%' },
-    // {...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '37%', leftEnd: '100%' },
-    //  {...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '50%', leftEnd: '100%'  },
-    // {...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '45%', leftEnd: '100%'  },
-
-    // {...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '41%', leftEnd: '92%', delay: 700 },
-  ]
-}
-
-function randomId () {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 }
 
 function randBetween (min, max) {
@@ -91,7 +70,7 @@ export const OpenBottleneck = () => {
         ]))
       }
     }
-  })
+  }, [balls, setBalls])
 
   return (
     <BaseBottleneck mode={BOTTLENECK_MODE.OPEN}>
