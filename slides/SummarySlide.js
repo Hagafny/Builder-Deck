@@ -1,5 +1,5 @@
 import React from 'react';
-import { ZoomSteps } from '../components/ZoomSteps';
+import { ZoomSteps } from '../components/ZoomSteps/ZoomSteps.js';
 import { ImageDeck, DECK_IMAGES } from '../images/ImageDeck';
 
 export const SummarySlide = () => {
@@ -9,34 +9,35 @@ export const SummarySlide = () => {
         width: '100vw',
         height: '100vh',
         display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gridTemplateRows: 'repeat(2, 1fr)',
+        gridColumnGap: '0px',
+        gridRowGap: '0px',
       }}
     >
       <ZoomSteps>
-        <ImageDeck
-          deckImage={DECK_IMAGES.ROCKET}
-          style={{ width: '128px', height: '128px' }}
-        />
-        <ImageDeck
-          deckImage={DECK_IMAGES.SEO}
-          style={{ width: '128px', height: '128px' }}
-        />
-        <ImageDeck
-          deckImage={DECK_IMAGES.ROCKET}
-          style={{ width: '128px', height: '128px' }}
-        />
-        <ImageDeck
-          deckImage={DECK_IMAGES.SEO}
-          style={{ width: '128px', height: '128px' }}
-        />
-        <ImageDeck
-          deckImage={DECK_IMAGES.ROCKET}
-          style={{ width: '128px', height: '128px' }}
-        />
-        <ImageDeck
-          deckImage={DECK_IMAGES.SEO}
-          style={{ width: '128px', height: '128px' }}
-        />
+        <GridWrapper image={DECK_IMAGES.SEO} />
+        <GridWrapper image={DECK_IMAGES.SEO} />
+        <GridWrapper image={DECK_IMAGES.SEO} />
+        <GridWrapper image={DECK_IMAGES.SEO} />
+        <GridWrapper image={DECK_IMAGES.SEO} />
+        <GridWrapper image={DECK_IMAGES.SEO} />
       </ZoomSteps>
     </div>
   );
 };
+
+const GridWrapper = ({ image, style }) => (
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+  >
+    <ImageDeck
+      deckImage={image}
+      style={{ width: '128px', height: '128px', ...style }}
+    />
+  </div>
+);
