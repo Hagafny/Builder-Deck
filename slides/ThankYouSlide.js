@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { ImageDeck, DECK_IMAGES } from '../../images/ImageDeck.js';
-import { BuilderSlideSection } from '../BuilderSlideSection/BuilderSlideSection.js';
-import { SpeechBubble } from '../SpeechBubble/SpeechBubble.js';
+import { ImageDeck, DECK_IMAGES } from '../images/ImageDeck.js';
+import { BuilderSlideSection } from '../components/BuilderSlideSection/BuilderSlideSection.js';
+import { SpeechBubble } from '../components/SpeechBubble/SpeechBubble.js';
 
 export const ThankYouSlide = () => {
   const [position, setPosition] = useState([]);

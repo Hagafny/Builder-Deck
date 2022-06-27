@@ -15,10 +15,18 @@ import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
 import { KawaiiWrapper } from './components/KawaiiWrapper/KawaiiWrapper.js';
 import './components/KawaiiWrapper/KawaiiWrapper.builder.js';
 import { SideBySide } from './layouts/SideBySide.js';
-import { ThankYouSlide } from './components/ThankYouSlide/ThankYouSlide.js';
+import { DevDependenciesSlide } from './slides/DevDependencies.js';
+import { ThankYouSlide } from './slides/ThankYouSlide.js';
 import myTheme from './theme/theme';
+import { SummarySlide } from './slides/SummarySlide.js';
 
 export const theme = myTheme;
+
+# Summary
+
+<SummarySlide />
+
+---
 
 # Code or No-Code: Why not both? 🤷‍♀️
 
@@ -189,7 +197,7 @@ const FaqPage = ({ data }) => {
 
 export async function getStaticProps() {
   // Get data from external API
-  const data = await getFaqData()
+  const data = await getFaqData();
 
   return {
     props: {
@@ -206,20 +214,20 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   // Get data from external API
-  const data = await getFaqData()
+  const data = await getFaqData();
 
   return {
     props: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
-````
+```
 
 ```js 10:22
 const FaqPage = ({ data }) => {
@@ -228,23 +236,23 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   const faqPageContent = await builder.get('page', {
     userAttributes: {
-      urlPath: '/faq'
-    }
-  })
+      urlPath: '/faq',
+    },
+  });
 
   return {
     props: {
-      faqPageContent
-    }
-  }
+      faqPageContent,
+    },
+  };
 }
-````
+```
 
 ```js 1:8
 const FaqPage = ({ data }) => {
@@ -253,23 +261,23 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
   const faqPageContent = await builder.get('page', {
     userAttributes: {
-      urlPath: '/faq'
-    }
-  })
+      urlPath: '/faq',
+    },
+  });
 
   return {
     props: {
-      faqPageContent
-    }
-  }
+      faqPageContent,
+    },
+  };
 }
-````
+```
 
 ```js 1:5
 const FaqPage = ({ faqPageContent }) => {
@@ -291,21 +299,36 @@ export async function getStaticProps() {
     }
   }
 }
-````
+```
 
 </CodeSurfer>
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_1} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ_END_1}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_2} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ_END_2}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
-<ImageDeck width={'100%'} height={'100%'} deckImage={DECK_IMAGES.FAQ_END_3} styles={{backgroundSize: 'cover'}} />
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.FAQ_END_3}
+  styles={{ backgroundSize: 'cover' }}
+/>
 
 ---
 
@@ -419,7 +442,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    }
+    },
   ],
 });
 ```
@@ -461,7 +484,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    }
+    },
   ],
 });
 ```
@@ -492,7 +515,7 @@ Builder.registerComponent(Button, {
       name: 'link',
       type: 'url',
       defaultValue: '/',
-    }
+    },
   ],
 });
 ```
@@ -551,7 +574,6 @@ Builder.registerComponent(Button, {
 
 <BuilderSlideSection />
 
-
 </Step>
 
 <Step>
@@ -572,7 +594,6 @@ export const BuilderSlideSection = () => {
 
   return <BuilderComponent model='slide' content={builderContentJson} />;
 };
-
 ```
 
 <BuilderSlideSection />
@@ -597,7 +618,6 @@ export const BuilderSlideSection = () => {
 
   return <BuilderComponent model='slide' content={builderContentJson} />;
 };
-
 ```
 
 <BuilderSlideSection />
@@ -622,7 +642,6 @@ export const BuilderSlideSection = () => {
 
   return <BuilderComponent model='slide' content={builderContentJson} />;
 };
-
 ```
 
 <BuilderSlideSection />
