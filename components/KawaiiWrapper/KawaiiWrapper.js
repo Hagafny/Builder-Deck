@@ -16,12 +16,12 @@ export const KawaiiWrapper = ({
     case 'Planet':
       Kawaii = Planet;
       break;
-    case 'Chocolate':
-      Kawaii = Chocolate;
-      break;
-    default:
     case 'Ice Cream':
       Kawaii = IceCream;
+      break;
+    default:
+    case 'Chocolate':
+      Kawaii = Chocolate;
       break;
   }
 
