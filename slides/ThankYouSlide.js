@@ -9,7 +9,7 @@ const twitterImage = <ImageDeck style={{ width: '128px', height: '128px' }} deck
 const potImage = <ImageDeck style={{ width: '128px', height: '128px' }} deckImage={DECK_IMAGES.POT}/>
 
 export const ThankYouSlide = () => {
-  const [position, setPosition] = useState([]);
+  const [topPosition, setTopPosition] = useState(45);
 
   const character = localStorage
     .getItem('character-value')
@@ -17,12 +17,10 @@ export const ThankYouSlide = () => {
     .join('-')
     .toLocaleLowerCase();
 
-  const [top, left] = position;
-
   useEffect(() => {
     console.log('my character', character)
-    setPosition(getPositionByCharacter(character));
-  }, [character, setPosition]);
+    setTopPosition(getTopPositionByCharacter(character));
+  }, [character, setTopPosition]);
 
   return (
     <div
@@ -48,7 +46,7 @@ export const ThankYouSlide = () => {
         <Logo imageComp={potImage}><a href="https://proofoftalk.com" target="_blank" rel="noreferrer">Proof of Talk Podcast</a></Logo>
       </div>
       <BuilderSlideSection />
-      <SpeechBubble {...{ top, left }} content={'Thank you for listening!'} />
+      <SpeechBubble top={topPosition} content={'Thank you for listening!'} />
     </div>
   );
 };
@@ -72,9 +70,9 @@ const Logo = ({
   );
 };
 
-const getPositionByCharacter = (character) =>
+const getTopPositionByCharacter = (character) =>
   ({
-    chocolate: [45, 72],
-    'ice-cream': [14, 72],
-    backpack: [23, 73],
+    chocolate: 45,
+    'ice-cream': 14,
+    backpack: 23,
   }[character || 'chocolate']);

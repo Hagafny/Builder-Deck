@@ -540,19 +540,18 @@ Builder.registerComponent(Button, {
 
 ---
 
-<CodeSurferColumns themes={[vsDark, myTheme]}>
+<SideBySide>
+  <div style={{display:'flex', justifyContent: 'center', alignItems: 'center', fontSize: '40px', textAlign: 'center', fontWeight: 'bold', marginLeft: '30px'}}>What if I told you it is integrated right here -></div>
+  <div style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}> <BuilderSlideSection /></div>
+</SideBySide>
 
-<Step>
+---
+
+<CodeSurfer theme={vsDark}>
 
 ```js
 <SlideSection />
 ```
-
-<BuilderSlideSection />
-
-</Step>
-
-<Step>
 
 ```js showNumbers
 // SlideSction.js
@@ -572,12 +571,6 @@ export const BuilderSlideSection = () => {
 };
 ```
 
-<BuilderSlideSection />
-
-</Step>
-
-<Step>
-
 ```js showNumbers 8:12
 // SlideSction.js
 import React, { useState, useEffect } from 'react';
@@ -595,12 +588,6 @@ export const BuilderSlideSection = () => {
   return <BuilderComponent model='slide' content={builderContentJson} />;
 };
 ```
-
-<BuilderSlideSection />
-
-</Step>
-
-<Step>
 
 ```js showNumbers 14
 // SlideSction.js
@@ -620,11 +607,7 @@ export const BuilderSlideSection = () => {
 };
 ```
 
-<BuilderSlideSection />
-
-</Step>
-
-</CodeSurferColumns>
+</CodeSurfer>
 
 ---
 

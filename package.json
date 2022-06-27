@@ -7,8 +7,8 @@
     "mdx-deck": "4.0.0"
   },
   "scripts": {
-    "start": "mdx-deck deck2.mdx",
-    "build": "mdx-deck build deck2.mdx",
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
     "help": "mdx-deck"
   },
   "dependencies": {
