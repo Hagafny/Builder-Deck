@@ -1,38 +1,27 @@
 import React from 'react';
 import { AnimatedCircle } from './AnimatedCircle';
 import { useSprings, easings } from 'react-spring';
-import { BaseBottleneck, BOTTLENECK_MODE } from './BaseBottleneck';
+import { BaseBottleneck, BOTTLENECK_MODE, DEPARTMENT_PROPS } from './BaseBottleneck';
 import { DEPARTMENTS } from '../../consts/departments';
 
 const circleAnimations = () => {
   return [
-    {
-      ...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING],
-      topEnd: '43%',
-      leftEnd: '94%',
-    },
+    { ...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '45%', leftEnd: '94%'},
     { ...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '37%', leftEnd: '91%' },
     { ...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '50%', leftEnd: '91%' },
-    {
-      ...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS],
-      topEnd: '45%',
-      leftEnd: '88%',
-    },
+    { ...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '45%', leftEnd: '88%'},
 
-    {
-      ...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING],
-      topEnd: '43%',
-      leftEnd: '87%',
-    },
-    { ...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '37%', leftEnd: '86%' },
+    { ...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING],topEnd: '36%', leftEnd: '87%'},
+    { ...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '57%', leftEnd: '88%' },
     { ...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '50%', leftEnd: '85%' },
-    {
-      ...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS],
-      topEnd: '45%',
-      leftEnd: '83%',
-    },
+    { ...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '40%', leftEnd: '83%'},
 
-    // {...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING], topEnd: '41%', leftEnd: '92%', delay: 700 },
+    // TODO: Barash, can you please add more cycles of 4 balls? (One for each department, until we kinda get to half the bottle. The circle at the end shouldn't go on top of each other)
+    // { ...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING],topEnd: '36%', leftEnd: '87%'},
+    // { ...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '57%', leftEnd: '88%' },
+    // { ...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '50%', leftEnd: '85%' },
+    // { ...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '40%', leftEnd: '83%'},
+    
   ];
 };
 

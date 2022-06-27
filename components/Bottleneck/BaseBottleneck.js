@@ -1,5 +1,4 @@
 import React from 'react';
-import { DEPARTMENTS_COLORS } from '../../consts/departments';
 import { DECK_IMAGES, ImageDeck } from '../../images/ImageDeck';
 import { DEPARTMENTS, DEPARTMENTS_COLORS } from '../../consts/departments';
 
