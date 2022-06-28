@@ -16,10 +16,9 @@ const circleAnimations = () => {
     { ...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '50%', leftEnd: '85%' },
     { ...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '40%', leftEnd: '83%'},
 
-    // TODO: Barash, can you please add more cycles of 4 balls? (One for each department, until we kinda get to half the bottle. The circle at the end shouldn't go on top of each other)
-    // { ...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING],topEnd: '36%', leftEnd: '87%'},
-    // { ...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '57%', leftEnd: '88%' },
-    // { ...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '50%', leftEnd: '85%' },
+    { ...DEPARTMENT_PROPS[DEPARTMENTS.MARKETING],topEnd: '50', leftEnd: '82%'},
+    { ...DEPARTMENT_PROPS[DEPARTMENTS.DESIGN], topEnd: '59%', leftEnd: '84%' },
+    { ...DEPARTMENT_PROPS[DEPARTMENTS.PRODUCT], topEnd: '59%', leftEnd: '80%' },
     // { ...DEPARTMENT_PROPS[DEPARTMENTS.OPERATIONS], topEnd: '40%', leftEnd: '83%'},
     
   ];
