@@ -37,7 +37,7 @@ const GridWrapper = ({ image, style }) => (
   >
     <ImageDeck
       deckImage={image}
-      style={{ width: '256px', height: '256px', ...style }}
+      style={{ width: '128px', height: '128px', ...style }}
     />
   </div>
 );

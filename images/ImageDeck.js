@@ -4,7 +4,7 @@ import { Image } from 'mdx-deck';
 import ron from '../images/ron.png';
 import bottle from '../images/bottleneck2.png';
 import openBottle from '../images/openBottle.png';
-import devDep from '../images/depDependencies.jpeg';
+import devDep from '../images/depDependencies.png';
 import easyplant from '../images/easyplant.png';
 import mixtiles from '../images/mixtiles.png';
 import homepage from '../images/homepage.png';
@@ -28,12 +28,13 @@ import product from '../images/product.png';
 import design from '../images/design.png';
 import twitter from '../images/twitter.png';
 import pot from '../images/pot.png';
+import whatIf from '../images/whatIf.jpeg';
 
 export const DECK_IMAGES = {
   RON: 'ron.png',
   BOTTLE: 'bottleneck2.png',
   OPEN_BOTTLE: 'openBottle.png',
-  DEV_DEPENDNECIES: 'devDependencies.jpeg',
+  DEV_DEPENDNECIES: 'devDependencies.png',
   EASYPLANT: 'easyplant.png',
   MIXTILES: 'mixtiles.png',
   HOMEPAGE: 'homepage.png',
@@ -56,7 +57,8 @@ export const DECK_IMAGES = {
   PRODUCT: 'product.png',
   DESIGN: 'design.png',
   TWITTER: 'twitter.png',
-  POT: '../images/pot.png'
+  POT: '../images/pot.png',
+  WHAT_IF: '../whatIf.jpeg'
 };
 
 const IMAGES = {
@@ -86,7 +88,8 @@ const IMAGES = {
   [DECK_IMAGES.PRODUCT]: product,
   [DECK_IMAGES.DESIGN]: design,
   [DECK_IMAGES.TWITTER]: twitter,
-  [DECK_IMAGES.POT]: pot
+  [DECK_IMAGES.POT]: pot,
+  [DECK_IMAGES.WHAT_IF]: whatIf
 };
 
 export const ImageDeck = ({ deckImage, width, height, style = {} }) => {
