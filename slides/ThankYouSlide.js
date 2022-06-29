@@ -5,7 +5,7 @@ import { SpeechBubble } from '../components/SpeechBubble/SpeechBubble.js';
 
 
 const mixtilesImage = <ImageDeck style={{ width: '128px', height: '128px' }} deckImage={DECK_IMAGES.MIXTILES}/>
-const twitterImage = <ImageDeck style={{ width: '128px', height: '128px' }} deckImage={DECK_IMAGES.TWITTER}/>
+const twitterImage = <ImageDeck style={{ width: '81px', height: '128px' }} deckImage={DECK_IMAGES.TWITTER}/>
 const potImage = <ImageDeck style={{ width: '128px', height: '128px' }} deckImage={DECK_IMAGES.POT}/>
 
 export const ThankYouSlide = () => {
