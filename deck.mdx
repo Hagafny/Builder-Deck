@@ -1,26 +1,26 @@
-import './styles.css';
-import { Steps, Notes } from 'mdx-deck';
-import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
-import { vsDark, nightOwl } from '@code-surfer/themes';
-import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js';
-import { Button } from './components/Button/Button.js';
-import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js';
-import { OpenBottleneck } from './components/Bottleneck/OpenBottleneck.js';
-import { RandomlyPlaced } from './layouts/RandomlyPlaced.js';
-import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js';
-import { FadeIn } from './components/FadeIn.js';
-import { IntroGrid } from './layouts/IntroGrid.js';
-import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js';
-import { KawaiiWrapper } from './components/KawaiiWrapper/KawaiiWrapper.js';
-import './components/KawaiiWrapper/KawaiiWrapper.builder.js';
-import { SideBySide } from './layouts/SideBySide.js';
-import { ThankYouSlide } from './slides/ThankYouSlide.js';
-import myTheme from './theme/theme';
-import { MigrationResultsSlide } from './slides/MigrationResultsSlide.js';
+import './styles.css'
+import { Steps, Notes } from 'mdx-deck'
+import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer'
+import { vsDark, nightOwl } from '@code-surfer/themes'
+import { BuilderSlideSection } from './components/BuilderSlideSection/BuilderSlideSection.js'
+import { Button } from './components/Button/Button.js'
+import { ClosedBottleneck } from './components/Bottleneck/ClosedBottleneck.js'
+import { OpenBottleneck } from './components/Bottleneck/OpenBottleneck.js'
+import { RandomlyPlaced } from './layouts/RandomlyPlaced.js'
+import { ImageDeck, DECK_IMAGES } from './images/ImageDeck.js'
+import { FadeIn } from './components/FadeIn.js'
+import { IntroGrid } from './layouts/IntroGrid.js'
+import { ZoomSteps } from './components/ZoomSteps/ZoomSteps.js'
+import { KawaiiWrapper } from './components/KawaiiWrapper/KawaiiWrapper.js'
+import './components/KawaiiWrapper/KawaiiWrapper.builder.js'
+import { SideBySide } from './layouts/SideBySide.js'
+import { ThankYouSlide } from './slides/ThankYouSlide.js'
+import myTheme from './theme/theme'
+import { MigrationResultsSlide } from './slides/MigrationResultsSlide.js'
 import { SlideLayout } from './layouts/SlideLayout.js'
 import { BuilderSlide } from './slides/BuilderSlide.js'
 
-export const theme = myTheme;
+export const theme = myTheme
 
 # Code or No-Code: Why not both? 🤷‍♀️
 
@@ -164,8 +164,8 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  );
-};
+  )
+}
 ```
 
 ```js 10:19
@@ -175,18 +175,18 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  );
-};
+  )
+}
 
 export async function getStaticProps() {
   // Get data from external API
-  const data = await getFaqData();
+  const data = await getFaqData()
 
   return {
     props: {
       data,
     },
-  };
+  }
 }
 ```
 
@@ -197,18 +197,18 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  );
-};
+  )
+}
 
 export async function getStaticProps() {
   // Get data from external API
-  const data = await getFaqData();
+  const data = await getFaqData()
 
   return {
     props: {
       data,
     },
-  };
+  }
 }
 ```
 
@@ -219,21 +219,21 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  );
-};
+  )
+}
 
 export async function getStaticProps() {
   const faqPageContent = await builder.get('page', {
     userAttributes: {
       urlPath: '/faq',
     },
-  });
+  })
 
   return {
     props: {
       faqPageContent,
     },
-  };
+  }
 }
 ```
 
@@ -244,28 +244,28 @@ const FaqPage = ({ data }) => {
       <h1>FAQ</h1>
       <FaqList data={data} />
     </>
-  );
-};
+  )
+}
 
 export async function getStaticProps() {
   const faqPageContent = await builder.get('page', {
     userAttributes: {
       urlPath: '/faq',
     },
-  });
+  })
 
   return {
     props: {
       faqPageContent,
     },
-  };
+  }
 }
 ```
 
 ```js 1:5
 const FaqPage = ({ faqPageContent }) => {
   return (
-    <BuilderComponent mode="page" content={faqPageContent}>
+    <BuilderComponent model="page" content={faqPageContent}>
   )
 }
 
@@ -334,18 +334,18 @@ export async function getStaticProps() {
 
 ```js showNumbers
 // Button.js
-import React from 'react';
-import MuiButton from '@mui/material/Button';
+import React from 'react'
+import MuiButton from '@mui/material/Button'
 
 const Button = ({ text, link }) => {
   return (
     <MuiButton text={text} href={link}>
       {text}
     </MuiButton>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
 ```
 
 ```js
@@ -358,18 +358,18 @@ export default Button;
 
 ```js showNumbers 5[16:31]
 // Button.js
-import React from 'react';
-import MuiButton from '@mui/material/Button';
+import React from 'react'
+import MuiButton from '@mui/material/Button'
 
 const Button = ({ text, link }) => {
   return (
     <MuiButton text={text} href={link}>
       {text}
     </MuiButton>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
 ```
 
 ```js
@@ -382,24 +382,24 @@ export default Button;
 
 ```js showNumbers 5[16:31]
 // Button.js
-import React from 'react';
-import MuiButton from '@mui/material/Button';
+import React from 'react'
+import MuiButton from '@mui/material/Button'
 
 const Button = ({ text, link }) => {
   return (
     <MuiButton text={text} href={link}>
       {text}
     </MuiButton>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
 ```
 
 ```js showNumbers
 // Button.builder.js
-import { Builder } from '@builder.io/react';
-import Button from './Button';
+import { Builder } from '@builder.io/react'
+import Button from './Button'
 
 Builder.registerComponent(Button, {
   name: 'MyButton',
@@ -415,7 +415,7 @@ Builder.registerComponent(Button, {
       defaultValue: '/',
     },
   ],
-});
+})
 ```
 
 </Step>
@@ -424,24 +424,24 @@ Builder.registerComponent(Button, {
 
 ```js showNumbers 5[16:31]
 // Button.js
-import React from 'react';
-import MuiButton from '@mui/material/Button';
+import React from 'react'
+import MuiButton from '@mui/material/Button'
 
 const Button = ({ text, link }) => {
   return (
     <MuiButton text={text} href={link}>
       {text}
     </MuiButton>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
 ```
 
 ```js showNumbers 6,9,14,19
 // Button.builder.js
-import { Builder } from '@builder.io/react';
-import Button from './Button';
+import { Builder } from '@builder.io/react'
+import Button from './Button'
 
 Builder.registerComponent(Button, {
   name: 'MyButton',
@@ -457,7 +457,7 @@ Builder.registerComponent(Button, {
       defaultValue: '/',
     },
   ],
-});
+})
 ```
 
 </Step>
@@ -466,13 +466,13 @@ Builder.registerComponent(Button, {
 
 ```js
 // app.js
-import './Button.builder.js';
+import './Button.builder.js'
 ```
 
 ```js showNumbers 6,9,14,19
 // Button.builder.js
-import { Builder } from '@builder.io/react';
-import Button from './Button';
+import { Builder } from '@builder.io/react'
+import Button from './Button'
 
 Builder.registerComponent(Button, {
   name: 'MyButton',
@@ -488,7 +488,7 @@ Builder.registerComponent(Button, {
       defaultValue: '/',
     },
   ],
-});
+})
 ```
 
 </Step>
@@ -549,77 +549,279 @@ Builder.registerComponent(Button, {
 
 ```js showNumbers
 // SlideSction.js
-import React, { useState, useEffect } from 'react';
-import { BuilderComponent, builder } from '@builder.io/react';
+import React, { useState, useEffect } from 'react'
+import { BuilderComponent, builder } from '@builder.io/react'
 
 export const BuilderSlideSection = () => {
-  const [builderContentJson, setBuilderContentJson] = useState(null);
+  const [builderContentJson, setBuilderContentJson] = useState(null)
 
   useEffect(() => {
     builder
       .get('slide', { url: window.location.pathname })
-      .then(setBuilderContentJson);
-  }, []);
+      .then(setBuilderContentJson)
+  }, [])
 
-  return <BuilderComponent model='slide' content={builderContentJson} />;
-};
+  return <BuilderComponent model='slide' content={builderContentJson} />
+}
 ```
 
 ```js showNumbers 6
 // SlideSction.js
-import React, { useState, useEffect } from 'react';
-import { BuilderComponent, builder } from '@builder.io/react';
+import React, { useState, useEffect } from 'react'
+import { BuilderComponent, builder } from '@builder.io/react'
 
 export const BuilderSlideSection = () => {
-  const [builderContentJson, setBuilderContentJson] = useState(null);
+  const [builderContentJson, setBuilderContentJson] = useState(null)
 
   useEffect(() => {
     builder
       .get('slide', { url: window.location.pathname })
-      .then(setBuilderContentJson);
-  }, []);
+      .then(setBuilderContentJson)
+  }, [])
 
-  return <BuilderComponent model='slide' content={builderContentJson} />;
-};
+  return <BuilderComponent model='slide' content={builderContentJson} />
+}
 ````
 
 ```js showNumbers 8:12
 // SlideSction.js
-import React, { useState, useEffect } from 'react';
-import { BuilderComponent, builder } from '@builder.io/react';
+import React, { useState, useEffect } from 'react'
+import { BuilderComponent, builder } from '@builder.io/react'
 
 export const BuilderSlideSection = () => {
-  const [builderContentJson, setBuilderContentJson] = useState(null);
+  const [builderContentJson, setBuilderContentJson] = useState(null)
 
   useEffect(() => {
     builder
       .get('slide', { url: window.location.pathname })
-      .then(setBuilderContentJson);
-  }, []);
+      .then(setBuilderContentJson)
+  }, [])
 
-  return <BuilderComponent model='slide' content={builderContentJson} />;
-};
+  return <BuilderComponent model='slide' content={builderContentJson} />
+}
 ```
 
 ```js showNumbers 14
 // SlideSction.js
-import React, { useState, useEffect } from 'react';
-import { BuilderComponent, builder } from '@builder.io/react';
+import React, { useState, useEffect } from 'react'
+import { BuilderComponent, builder } from '@builder.io/react'
 
 export const BuilderSlideSection = () => {
-  const [builderContentJson, setBuilderContentJson] = useState(null);
+  const [builderContentJson, setBuilderContentJson] = useState(null)
 
   useEffect(() => {
     builder
       .get('slide', { url: window.location.pathname })
-      .then(setBuilderContentJson);
-  }, []);
+      .then(setBuilderContentJson)
+  }, [])
 
-  return <BuilderComponent model='slide' content={builderContentJson} />;
-};
+  return <BuilderComponent model='slide' content={builderContentJson} />
+}
 ```
 
 </CodeSurfer>
+
+---
+
+<ImageDeck
+  width={'100%'}
+  height={'100%'}
+  deckImage={DECK_IMAGES.KAWAII}
+  styles={{ backgroundSize: 'cover' }}
+/>
+
+---
+
+<CodeSurferColumns themes={[vsDark, myTheme]}>
+
+<Step>
+
+```js showNumbers
+// Kawaii.js
+import React from 'react'
+import { Backpack, IceCream, Chocolate } from 'react-kawaii'
+
+export const Kawaii = ({ character, mood, color }) => {
+  let Character
+
+  switch (character) {
+    case 'Backpack':
+      Kawaii = Backpack
+      break;
+    case 'Ice Cream':
+      Kawaii = IceCream
+      break;
+    default:
+    case 'Chocolate':
+      Kawaii = Chocolate
+      break;
+  }
+
+  return <Character mood={mood} color={color} size={750} />
+}
+```
+
+```js
+
+```
+
+</Step>
+
+<Step>
+
+```js showNumbers
+// Kawaii.js
+import React from 'react'
+import { Backpack, IceCream, Chocolate } from 'react-kawaii'
+
+export const Kawaii = ({ character, mood, color }) => {
+  let Character
+
+  switch (character) {
+    case 'Backpack':
+      Kawaii = Backpack
+      break;
+    case 'Ice Cream':
+      Kawaii = IceCream
+      break;
+    default:
+    case 'Chocolate':
+      Kawaii = Chocolate
+      break;
+  }
+
+  return <Character mood={mood} color={color} size={750} />
+}
+```
+
+```js showNumbers
+// Kawaii.builder.js
+import { Builder } from '@builder.io/react'
+import { Kawaii } from './Kawaii'
+
+Builder.registerComponent(Kawaii, {
+  name: 'Kawaii',
+  inputs: [
+    {
+      name: 'character',
+      type: 'enum',
+      enum: ['Chocolate', 'Backpack', 'Ice Cream'],
+      defaultValue: 'Chocolate',
+    },
+    {
+      name: 'mood',
+      type: 'string',
+      enum: ['Blissful', 'Shocked', 'Love Struck'],
+      defaultValue: 'Blissful',
+    },
+    {
+      name: 'color',
+      type: 'color',
+      defaultValue: '#fc105c',
+    },
+  ],
+})
+```
+
+</Step>
+
+<Step>
+
+```js showNumbers 5[23:50]
+// Kawaii.js
+import React from 'react'
+import { Backpack, IceCream, Chocolate } from 'react-kawaii'
+
+export const Kawaii = ({ character, mood, color }) => {
+  let Character
+
+  switch (character) {
+    case 'Backpack':
+      Kawaii = Backpack
+      break;
+    case 'Ice Cream':
+      Kawaii = IceCream
+      break;
+    default:
+    case 'Chocolate':
+      Kawaii = Chocolate
+      break;
+  }
+
+  return <Character mood={mood} color={color} size={750} />
+}
+```
+
+```js showNumbers 5[27:32],6,9:11,15:17,21:23
+// Kawaii.builder.js
+import { Builder } from '@builder.io/react'
+import { Kawaii } from './Kawaii'
+
+Builder.registerComponent(Kawaii, {
+  name: 'Kawaii',
+  inputs: [
+    {
+      name: 'character',
+      type: 'enum',
+      enum: ['Chocolate', 'Backpack', 'Ice Cream'],
+      defaultValue: 'Chocolate',
+    },
+    {
+      name: 'mood',
+      type: 'string',
+      enum: ['Blissful', 'Shocked', 'Love Struck'],
+      defaultValue: 'Blissful',
+    },
+    {
+      name: 'color',
+      type: 'color',
+      defaultValue: '#fc105c',
+    },
+  ],
+})
+```
+
+</Step>
+
+<Step>
+
+```js
+// app.js
+import './Kawaii.builder.js'
+```
+
+```js showNumbers 5[27:32],6,9:11,15:17,21:23
+// Kawaii.builder.js
+import { Builder } from '@builder.io/react'
+import { Kawaii } from './Kawaii'
+
+Builder.registerComponent(Kawaii, {
+  name: 'Kawaii',
+  inputs: [
+    {
+      name: 'character',
+      type: 'enum',
+      enum: ['Chocolate', 'Backpack', 'Ice Cream'],
+      defaultValue: 'Chocolate',
+    },
+    {
+      name: 'mood',
+      type: 'string',
+      enum: ['Blissful', 'Shocked', 'Love Struck'],
+      defaultValue: 'Blissful',
+    },
+    {
+      name: 'color',
+      type: 'color',
+      defaultValue: '#fc105c',
+    },
+  ],
+})
+```
+
+</Step>
+
+</CodeSurferColumns>
 
 ---
 

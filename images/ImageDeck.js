@@ -29,6 +29,7 @@ import design from '../images/design.png';
 import twitter from '../images/twitter.png';
 import pot from '../images/pot.png';
 import whatIf from '../images/whatIf.jpeg';
+import kawaii from '../images/kawaii.png';
 
 export const DECK_IMAGES = {
   RON: 'ron.png',
@@ -58,7 +59,8 @@ export const DECK_IMAGES = {
   DESIGN: 'design.png',
   TWITTER: 'twitter.png',
   POT: '../images/pot.png',
-  WHAT_IF: '../whatIf.jpeg'
+  WHAT_IF: '../whatIf.jpeg',
+  KAWAII: 'kawaii.png'
 };
 
 const IMAGES = {
@@ -89,7 +91,8 @@ const IMAGES = {
   [DECK_IMAGES.DESIGN]: design,
   [DECK_IMAGES.TWITTER]: twitter,
   [DECK_IMAGES.POT]: pot,
-  [DECK_IMAGES.WHAT_IF]: whatIf
+  [DECK_IMAGES.WHAT_IF]: whatIf,
+  [DECK_IMAGES.KAWAII]: kawaii
 };
 
 export const ImageDeck = ({ deckImage, width, height, style = {} }) => {
