@@ -11,11 +11,11 @@ const potImage = <ImageDeck style={{ width: '128px', height: '128px' }} deckImag
 export const ThankYouSlide = () => {
   const [topPosition, setTopPosition] = useState(45);
 
-  const character = localStorage
-    .getItem('character-value')
+  const characterValue = localStorage.getItem('character-value')
+  const character = characterValue ? characterValue
     .split(' ')
     .join('-')
-    .toLocaleLowerCase();
+    .toLocaleLowerCase() : null
 
   useEffect(() => {
     console.log('my character', character)
