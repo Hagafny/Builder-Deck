@@ -22,7 +22,7 @@ Deck is hosted [here](https://master--endearing-unicorn-c42d88.netlify.app)
 
 ```sh
 $ git clone https://github.com/Hagafny/Builder-Deck.git
-$ cd homie
+$ cd Builder-Deck
 $ yarn install
 $ yarn start
 ```
