@@ -28,4 +28,4 @@ yarn-error.log*
 
 # dev
 framework
-public
+public/
