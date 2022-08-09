@@ -26,4 +26,4 @@ Builder.registerComponent(KawaiiWrapper, {
       defaultValue: '#fc105c',
     },
   ],
-});
+})
