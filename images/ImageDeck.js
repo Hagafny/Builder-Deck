@@ -45,7 +45,7 @@ export const DECK_IMAGES = {
   MUI_BUTTON: 'muiButton.png',
   COMPONENTS_ONLY_MODE: 'com.png',
   BUILDER: 'builder.png',
-  NEXT_JS: 'nextJS.png',
+  NEXT_JS: 'nextjs.png',
   BUILDER_1: 'builder1.png',
   BUILDER_2: 'builder2.png',
   ROCKET: 'rocket.png',
